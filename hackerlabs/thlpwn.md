@@ -17,7 +17,7 @@
 ![Third Step](/img/hackerlabs/thlpwn_3.png)
 
 > [!TIP]
-> No hace falta tampoco tener un comando de nmap con todas los argumentos...
+> No hace falta tampoco tener un comando de nmap con todos los argumentos...
 
 Ahora sabemos que tiene abierto http y ssh, intentaremos abrir una conexión HTTP con el navegador web.
 
