@@ -42,9 +42,12 @@ El enlace que funciona es el de `Downloads`, intentemos acceder a la url.
 
 ![Eighth Step](/img/hackerlabs/thlpwn_8.png)
 
-Veremos que nos da como instrucciones para descargarnos dicho archivo. Nos lo vamos a descargar.... 
+Vemos que nos da como unas instrucciones para descargarnos dicho archivo. Procedemos a descargarlo.... 
 
 Casualmente nos dicen que hagamos el comando `strings` en su página web. Lo haremos para ver su contenido.
+
+> [!TIP]
+> El comando `strings` extrae secuencias de caracteres que son entedibles para el humano
 
 ![Ninth Step](/img/hackerlabs/thlpwn_9.png)
 
