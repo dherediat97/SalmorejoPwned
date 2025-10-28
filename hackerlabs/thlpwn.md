@@ -51,11 +51,11 @@ Casualmente nos dicen que hagamos el comando `strings` en su página web. Lo har
 
 ![Ninth Step](/img/hackerlabs/thlpwn_9.png)
 
-Si nos fijamos bien, nos están proporcionando unas credenciales. ¿Será del ssh? Vamos a probar...
+Si nos fijamos bien, nos están proporcionando unas credenciales. ¿Serán del ssh? Vamos a probar...
 
 ![Tenth Step](/img/hackerlabs/thlpwn_10.png)
 
-Así es, era las credenciales del SSH y funcionan correctamente. Ahora tenemos acceso al servidor ssh, sin realizar un ataque de fuerza bruta hemos conseguido un acceso ilegítimo al host objetivo. Investiguemos por la carpeta actual y... ¡Bingo, Flag Encontrada!
+Así es, eran las credenciales del SSH y funcionan correctamente. Ahora tenemos acceso al servidor ssh, sin realizar un ataque de fuerza bruta hemos conseguido un acceso ilegítimo al host objetivo. Investiguemos por la carpeta actual y... ¡Bingo, Flag Encontrada!
 
 ![Tenth Step](/img/hackerlabs/thlpwn_11.png)
 
