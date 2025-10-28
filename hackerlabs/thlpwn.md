@@ -16,11 +16,15 @@
 
 ![Third Step](/img/hackerlabs/thlpwn_3.png)
 
+> [!TIP]
+> No hace falta tampoco tener un comando de nmap con todas los argumentos...
+
 Ahora sabemos que tiene abierto http y ssh, intentaremos abrir una conexión HTTP con el navegador web.
 
 #### 3º paso(Reconocimiento de servicios): Este paso es sencillamente para investigar lo que podemos hacer con lo poco que tenemos....
 
 ![Fourth Step](/img/hackerlabs/thlpwn_4.png)
+
 
 ¡Interesante! El autor del ctf nos está diciendo que el host con la conexión HTTP no funcionará, a no ser que no se habilite el virtual hosting.Investiguemos más...
 
@@ -40,7 +44,7 @@ El enlace que funciona es el de `Downloads`, intentemos acceder a la url.
 
 Veremos que nos da como instrucciones para descargarnos dicho archivo. Nos lo vamos a descargar.... 
 
-Casualmente nos dicen que hagamos el comando `strings`. Lo haremos para ver su contenido.
+Casualmente nos dicen que hagamos el comando `strings` en su página web. Lo haremos para ver su contenido.
 
 ![Ninth Step](/img/hackerlabs/thlpwn_9.png)
 
@@ -48,7 +52,7 @@ Si nos fijamos bien, nos están proporcionando unas credenciales. ¿Será del ss
 
 ![Tenth Step](/img/hackerlabs/thlpwn_10.png)
 
-Funciona correctamente, tenemos ahora acceso al servidor ssh, sin realizar un ataque de fuerza bruta hemos conseguido un acceso ilegítimo al host objetivo. Investiguemos por la carpeta actual y... ¡Bingo, Flag Encontrada!
+Así es, era las credenciales del SSH y funcionan correctamente. Ahora tenemos acceso al servidor ssh, sin realizar un ataque de fuerza bruta hemos conseguido un acceso ilegítimo al host objetivo. Investiguemos por la carpeta actual y... ¡Bingo, Flag Encontrada!
 
 ![Tenth Step](/img/hackerlabs/thlpwn_11.png)
 
@@ -63,7 +67,10 @@ Usamos el comando `sudo /bin/bash` para convertirnos en superusuario.
 
 ![Thirdteenth Step](/img/hackerlabs/thlpwn_13.png)
 
-¡Y finalmente somos root! Ahora nos toca ver la flag del usuario `root`. Ejecutamos algún comando para mostrar el contenido de ficheros como son `cat/less/more` y... 
+¡Y finalmente somos root! Ahora nos toca ver la flag del usuario `root`. 
+
+> [!TIP]
+> Ejecutamos algún comando para mostrar el contenido de ficheros como son `cat/less/more` y... 
 
 ![Foutteenth Step](/img/hackerlabs/thlpwn_14.png)
 
