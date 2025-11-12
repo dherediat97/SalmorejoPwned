@@ -24,47 +24,39 @@
 
 ### Luego, nos fijamos en la primera pregunta: ¿Qué dirección IP externa sirvió el _stager_ `p.sh` al servidor web?
 
-### Lo más seguro que este en el log de acceso...
-
-### Filtramos con grep el termino 'p.sh' y nos da la IP que es...
+### Filtramos en ese archivo y filtraremos con `grep` el termino 'p.sh' y nos da la IP que es...
 
 ![Thid Step](/img/hackerlabs/topodns_3.png)
 
-### A la pregunta de: ¿Qué fichero PHP (solo nombre) fue el punto de entrada más probable de la explotación inicial?
+### Para saber el nombre del archivo....
 
 ![Fourth Step](/img/hackerlabs/topodns_4.png)
 
-#### Responderemos: `upload.php`. Después de una larga investigación(usando el comando `more`). Nos fijamos en el archivo `upload.php` que tiene un nombre sospechoso, detectamos que ese es el punto de entrada.
+#### Después de una larga investigación(usando el comando `more` en el archivo `access_log`) hemos descubierto el nombre del archivo.
 
 > [!TIP]
 > Esta es la parte más difícil(desde mi punto de vista), debido al ruido que tiene los logs. Ruido que es un uso cotidiano de la plataforma, es una buena manera de habituarnos a no estresarnos con tanta información.
 
-### Para saber `¿Cuál es el FQDN de la primera consulta de _beaconing_ de C2 observada en los logs?` 
+### Para saber: ¿Cuál es el FQDN de la primera consulta de _beaconing_ de C2 observada en los logs?
 
 ![Fifth Step](/img/hackerlabs/topodns_5.png)
 
 > [!TIP]
-> Recomiendo usar mucho el comando `more` en temas de forense, todavía más si como en este caso el host donde están los logs es sin interfaz gráfica. Cada maestro tiene su librillo, como dice el dicho, sólo es mi recomendación personal.
+> Usaremos el comando `more dns.log`. Lo recomiendo en temas de forense, todavía más si como en este caso el host donde están los logs es sin interfaz gráfica. Cada maestro tiene su librillo, como dice el dicho, sólo es mi recomendación personal.
 
 ### ¡Siguiente pregunta! ¿Cuál es el dominio (solo el dominio, sin subdominios de datos) usado para exfiltrar el fichero shadow?
 
 ![Sixth Step](/img/hackerlabs/topodns_6.png)
 
 > [!TIP]
-> Seguimos en el mismo archivo el dns.log, y nos damos cuenta que hay muchos subdominios que usan el mismo dominio(data.thl) en el log.
+> Seguimos investigando el dns.log.
 
-### Ahora toca.... ¿Qué servicio de red (protocolo) usó el atacante para pivotar al servidor interno 10.0.0.50?
+### Última parte, resolver el inquientante misterio del topo. 
 
 ![Seventh Step](/img/hackerlabs/topodns_7.png)
 
-> [!TIP]
-> Vemos tres tipos de logs(dns, access y ftp), y si ha hecho una subida de un archivo, es muy posible que use FTP(File Transfer Protocol - Protocolo de transferencias de archivos) para pivotar.
+### Con esto hemos resuelto: la ip del atacante, cómo pudo acceder, el punto de entrada, por dónde pivoto el atacante y las credenciales que uso luego.
 
-Y así es. FTP fue el servicio de red/protocolo usado para pivotar al servidor interno 10.0.0.50.
+![gif](https://c.tenor.com/ul_Bdn13nnQAAAAd/tenor.gif)
 
-Observamos el fichero de FTP y así es, además nos dará las respuestas a las últimas tres preguntas:
-- ¿Qué nombre de usuario se utilizó para autenticarse en el servidor interno? Coloreado en borde rojo.
-- ¿Qué contraseña se utilizó para el movimiento lateral exitoso? Coloreado con borde verde.
-- ¿Cuál es el nombre de fichero exacto que el atacante robó del servidor interno? Coloreado con borde amarillo.
-
-# ¡Enhorabuena, CTF Completado!
+# ¡Buen trabajo, CTF Completado!
