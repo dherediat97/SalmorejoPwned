@@ -63,7 +63,7 @@
 Y así es. FTP fue el servicio de red/protocolo usado para pivotar al servidor interno 10.0.0.50.
 
 Observamos el fichero de FTP y así es, además nos dará las respuestas a las últimas tres preguntas:
-- Qué nombre de usuario se utilizó para autenticarse en el servidor interno? Coloreado en borde rojo.
+- ¿Qué nombre de usuario se utilizó para autenticarse en el servidor interno? Coloreado en borde rojo.
 - ¿Qué contraseña se utilizó para el movimiento lateral exitoso? Coloreado con borde verde.
 - ¿Cuál es el nombre de fichero exacto que el atacante robó del servidor interno? Coloreado con borde amarillo.
 
