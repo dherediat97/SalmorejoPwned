@@ -1,4 +1,6 @@
-# Resolución del CTF:
+![CTF Image](/img/hackerlabs/thlpwn_1.png)
+
+# Resolución del CTF ~ THLPWN:
 
 | Propiedad | Valor |
 |---	|---	|
@@ -10,11 +12,11 @@
 
 #### 1º paso(Instalación y configuración): Una vez tengamos la OVA descargada, descomprimida y funcionando. OJO, muy importante que esté ambos equipos(el host atacante y el host objetivo) en la misma red. El autor de está máquina, nos ha dado una pista bastante importante: la IP de la maquina objetivo.
 
-![Second Step](/img/hackerlabs/thlpwn_2.png)
+![First Step](/img/hackerlabs/thlpwn_2.png)
 
 #### 2º paso(Enumeración de servicios): Este paso es el más importante, porque cada máquina para nosotros es desconocida, no sabemos qué servicios posee.
 
-![Third Step](/img/hackerlabs/thlpwn_3.png)
+![Second Step](/img/hackerlabs/thlpwn_3.png)
 
 > [!TIP]
 > No hace falta tampoco tener un comando de nmap con todos los argumentos...
@@ -23,24 +25,24 @@ Ahora sabemos que tiene abierto http y ssh, intentaremos abrir una conexión HTT
 
 #### 3º paso(Reconocimiento de servicios): Este paso es sencillamente para investigar lo que podemos hacer con lo poco que tenemos....
 
-![Fourth Step](/img/hackerlabs/thlpwn_4.png)
+![Third Step](/img/hackerlabs/thlpwn_4.png)
 
 
 ¡Interesante! El autor del ctf nos está diciendo que el host con la conexión HTTP no funcionará, a no ser que no se habilite el virtual hosting.Investiguemos más...
 
-![Fifth Step](/img/hackerlabs/thlpwn_5.png)
+![Fourth Step](/img/hackerlabs/thlpwn_5.png)
 
 Si observamos bien en la línea 18 de la hoja de estilos de CSS de la web. Veremos que nos ha dado el host DNS, por lo tanto, debemos de configurar ahora en el archivo `/etc/hosts` dicha IP con su host para poder acceder.
 
-![Sixth Step](/img/hackerlabs/thlpwn_6.png)
+![Fifth Step](/img/hackerlabs/thlpwn_6.png)
 
 Y ahora, podremos acceder a dicha página: `http://thlpwn.thl/`. Veremos en dicha página web, que todos los enlaces están caídos menos uno.
 
-![Seventh Step](/img/hackerlabs/thlpwn_7.png)
+![Sixth Step](/img/hackerlabs/thlpwn_7.png)
 
 El enlace que funciona es el de `Downloads`, intentemos acceder a la url.
 
-![Eighth Step](/img/hackerlabs/thlpwn_8.png)
+![Seventh Step](/img/hackerlabs/thlpwn_8.png)
 
 Vemos que nos da como unas instrucciones para descargarnos dicho archivo. Procedemos a descargarlo.... 
 
@@ -49,11 +51,11 @@ Casualmente nos dicen que hagamos el comando `strings` en su página web. Lo har
 > [!TIP]
 > El comando `strings` extrae secuencias de caracteres que son entedibles para el humano
 
-![Ninth Step](/img/hackerlabs/thlpwn_9.png)
+![Eighth Step](/img/hackerlabs/thlpwn_9.png)
 
 Si nos fijamos bien, nos están proporcionando unas credenciales. ¿Serán del ssh? Vamos a probar...
 
-![Tenth Step](/img/hackerlabs/thlpwn_10.png)
+![Ninth Step](/img/hackerlabs/thlpwn_10.png)
 
 Así es, eran las credenciales del SSH y funcionan correctamente. Ahora tenemos acceso al servidor ssh, sin realizar un ataque de fuerza bruta hemos conseguido un acceso ilegítimo al host objetivo. Investiguemos por la carpeta actual y... ¡Bingo, Flag Encontrada!
 
