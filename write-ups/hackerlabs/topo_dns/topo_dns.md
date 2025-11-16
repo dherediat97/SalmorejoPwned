@@ -1,6 +1,6 @@
 ![CTF Image](/img/hackerlabs/topodns_1.png)
 
-# Resolución del CTF:
+# Resolución del CTF
 
 | Propiedad | Valor |
 |---	|---	|

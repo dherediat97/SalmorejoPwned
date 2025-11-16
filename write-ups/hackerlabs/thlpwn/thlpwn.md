@@ -1,6 +1,6 @@
 ![CTF Image](/img/hackerlabs/thlpwn_1.png)
 
-# Resolución del CTF ~ THLPWN:
+# Resolución del CTF ~ THLPWN
 
 | Propiedad | Valor |
 |---	|---	|
@@ -9,6 +9,7 @@
 | Dificultad     | Principiante   |
 | Fecha          | 25/10/2025     |
 | Tipo           | Red Team       |
+| Autor Write-up | dherediat      |
 
 #### 1º paso(Instalación y configuración): Una vez tengamos la OVA descargada, descomprimida y funcionando. OJO, muy importante que esté ambos equipos(el host atacante y el host objetivo) en la misma red. El autor de está máquina, nos ha dado una pista bastante importante: la IP de la maquina objetivo.
 
