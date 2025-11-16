@@ -22,10 +22,9 @@
 > [!TIP]
 > Me di cuenta de que las ips estaban estáticas en la web. La web cargará, pero sin estilos. Tenemos que hacer este comando para que pille bien los comandos de enumeración...
 
-![Third 1/4 Step](/img/hackerlabs/aceituna_brava_3_1.png)
-![Thid 2/4 Step](/img/hackerlabs/aceituna_brava_3_2.png)
-![Third 3/4 Step](/img/hackerlabs/aceituna_brava_3_3.png)
-![Third 3/4 Step](/img/hackerlabs/aceituna_brava_3_4.png)
+![Third 1/3 Step](/img/hackerlabs/aceituna_brava_3_1.png)
+![Third 2/3 Step](/img/hackerlabs/aceituna_brava_3_2.png)
+![Third 3/3 Step](/img/hackerlabs/aceituna_brava_3_3.png)
 
 Hasta ahora es igual que muchas máquinas que hay en TheHackerLabs. Pero claro, es un CTF de reversing, por ello debemos pensar en de que manera podemos entrar sin saber el usuario ni la contraseña. Podemos probar que al darle en "Olvidé mi contraseña" y rellenamos el campo de nombre de usuario con un usuario que casi siempre esta en todos los entornos: "admin".Es correcto, nos daremos cuenta de que ese usuario sí existe, podríamos usar hydra y hacer un ataque de fuerza bruta, pero no sería buena idea, ya que tardaría una eternidad. Yo lo llegué a hacer, pero sin resultado.
 
