@@ -55,32 +55,18 @@ Desde mi punto de vista, es más sencillo crear un usuario de test, y ya con ese
 
 Usamos este archivo para la subida de este archivo en el servidor y posterior ejecución.
 
-
 ![Sixth Step](/img/hackerlabs/aceituna_brava_6_2.png)
 
 Ya que la vulnerabilidad esta en nuestra versión, que lo podréis comprobar si váis a `/documentation`,  usamos `curl` para subir el archivo y aprovechamos que el método [postUnsupported](https://github.com/chamilo/chamilo-lms/commit/3b487a55076fb06f96809b790a35dcdd42f8ec49#diff-fd99273a645b87ef01cb9adce9809e733f06690480f751f81ca3c296f847f1a8L17-L299) sigue existiendo.
 
+![Sixth Step](/img/hackerlabs/aceituna_brava_6_3.png)
 
-<!-- ![Seventh Step](/img/hackerlabs/aceituna_brava_8.png)
-
-
-![Eighth Step](/img/hackerlabs/aceituna_brava_9.png)
-
-
-![Ninth Step](/img/hackerlabs/aceituna_brava_10.png)
-
-
-![Tenth Step](/img/hackerlabs/aceituna_brava_11.png)
-
-### 4º Paso(Escalamiento de privilegios): 
-
-![Twelfth Step](/img/hackerlabs/aceituna_brava_12.png)
-
+### 4º Paso(Escalamiento de privilegios):
+En Proceso
 
 ![Thirdteenth Step](/img/hackerlabs/aceituna_brava_13.png)
 
 ¡Y finalmente somos root! Ahora nos toca ver la flag del usuario `root`. 
-
 
 ![Foutteenth Step](/img/hackerlabs/aceituna_brava_14.png)
 
