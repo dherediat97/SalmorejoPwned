@@ -25,8 +25,7 @@
 ### 2º paso(Enumeración de servicios): Este siempre será uno de los pasos más importantes, porque cada máquina para nosotros es desconocida, no sabemos qué servicios posee.
 ![Pre Second Step](/img/hackerlabs/aceituna_brava_2_1.png)
 
-> [!TIP]
-> Me di cuenta de que las ips estaban estáticas en la web. La web cargará, pero sin estilos. Tenemos que hacer este comando para que pille bien los comandos de enumeración...
+Me di cuenta de que cargaba en la web una de las IP y era estática. La web cargará, pero sin estilos.También los enlaces estarán cambiados,por lo tanto tendremos que hacer este comando para que redireccione a una IP inexistente y asi todo fluya como debería.
 
 ![Third 1/3 Step](/img/hackerlabs/aceituna_brava_3_1.png)
 
@@ -38,7 +37,7 @@ Tambien podemos hacer enumeración con nmap, y podremos ver más información, c
 
 ![Third 3/3 Step](/img/hackerlabs/aceituna_brava_3_3.png)
 
-Durante mucho tiempo buscando en las carpetas, pensamos si Chamilo tiene alguna vulnerabilidad, y sí tiene esa [vulnerabilidad](https://nvd.nist.gov/vuln/detail/CVE-2023-4220). Lo que conlleva esto, que podemos subir cualquier archivo a al carpeta indicada en la vulnerabilidad(/main/inc/lib/javascript/bigupload/inc/bigUpload.php).
+Durante mucho tiempo buscando en las carpetas, pensamos si Chamilo tiene alguna vulnerabilidad, y sí tiene esa [vulnerabilidad](https://nvd.nist.gov/vuln/detail/CVE-2023-4220). Lo que conlleva, que podemos subir cualquier archivo a al carpeta indicada en la vulnerabilidad(/main/inc/lib/javascript/bigupload/inc/bigUpload.php).
 
 ### 3º paso(Reconocimiento de servicios): Este paso es sencillamente para investigar lo que podemos hacer con lo poco que tenemos....
 
@@ -85,4 +84,4 @@ Ya que la vulnerabilidad esta en nuestra versión, que lo podréis comprobar si 
 
 ![Foutteenth Step](/img/hackerlabs/aceituna_brava_14.png)
 
-# ¡Enhorabuena, CTF Completado! --> -->
+# ¡Enhorabuena, CTF Completado! -->
