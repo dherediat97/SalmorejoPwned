@@ -7,8 +7,8 @@
 
 # Indice
 1. [HackerLabs](write-ups/hackerlabs/index.md)
-2. [CyberDefenders](cyber_defenders/)
-3. [Hack The Box](hack_the_box/)
+2. [CyberDefenders](write-ups/cyber_defenders/index.md)
+3. [Hack The Box](write-ups/hack_the_box/index.md)
 
 
 Made by @dherediat97
