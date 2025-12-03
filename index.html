@@ -1,13 +1,13 @@
 <html>
     <head>
-        <link href="build/asciinema-player.css" rel="stylesheet" />
+        <link href="src/lib/asciinema-player.css" rel="stylesheet" />
     </head>
     <body>
         <div id="startVideo"></div>
-    <script src="build/asciinema-player.min.js"></script>
+    <script src="src/lib/asciinema-player.min.js"></script>
     <script>
         AsciinemaPlayer.create(
-        '/cast/index.cast',
+        'assets/index.cast',
         document.getElementById('startVideo'),
         { cols: 80, rows: 24 }
         );
