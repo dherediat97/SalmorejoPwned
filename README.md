@@ -12,9 +12,9 @@ ToDO List:
 
 
 # Indice
-1. [HackerLabs](write-ups/hackerlabs/index.md)
-2. [CyberDefenders](write-ups/cyber_defenders/index.md)
-3. [Hack The Box](write-ups/hack_the_box/index.md)
+1. [HackerLabs](write-ups/hackerlabs/README.md)
+2. [CyberDefenders](write-ups/cyber_defenders/README.md)
+3. [Hack The Box](write-ups/hack_the_box/README.md)
 
 
 Made by @dherediat97
