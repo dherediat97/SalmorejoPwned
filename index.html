@@ -6,11 +6,14 @@
         <div id="startVideo"></div>
         <script src="src/lib/asciinema-player.min.js"></script>
         <script>
-            const player = AsciinemaPlayer.create(
-            'assets/index.cast',
-            document.getElementById('startVideo'),
-            { cols: 80, rows: 24, theme: 'dracula' }
-            );
+            const player = AsciinemaPlayer.create({
+                url: 'assets/index.cast',
+                cols: 80, 
+                rows: 24, 
+                theme: 'dracula', 
+                autoPlay: true,  
+                poster: 'npt:1:23'
+            },  document.getElementById('startVideo'));
 
             player.addEventListener('input', ({ data }) => {
                 // this is fired 125 milliseconds ahead of the original key press time
