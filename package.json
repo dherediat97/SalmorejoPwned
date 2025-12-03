@@ -1,0 +1,23 @@
+{
+  "name": "cyberwriteups",
+  "version": "1.0.0",
+  "description": "[![Typing SVG](https://readme-typing-svg.herokuapp.com/?font=Google+Sans+Code&color=45F727&pause=500&background=000000&width=400&height=50&lines=%C2%A1%C2%A1%C2%A1Bienvenid@%20a%20mis%20write-ups!!!;HackerLabs;CyberDefenders;HackTheBox)](https://git.io/typing-svg)",
+  "homepage": "https://github.com/dherediat97/CyberWriteUps#readme",
+  "bugs": {
+    "url": "https://github.com/dherediat97/CyberWriteUps/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dherediat97/CyberWriteUps.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "asciinema-player": "^3.12.1"
+  }
+}
