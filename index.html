@@ -1,27 +1,53 @@
 <html>
-    <head>
-        <link href="src/lib/asciinema-player.css" rel="stylesheet" />
-    </head>
-    <body>
-        <h1>Sedition</h1>
-        <h3>Scanning & Enumeration</h3> 
-        <div id="startVideo"></div>
-        <script src="src/lib/asciinema-player.min.js"></script>
-        <script>
-            const player = AsciinemaPlayer.create({
-                url: 'assets/sedition.cast',
-                cols: 80, 
-                rows: 24, 
-                theme: 'dracula', 
-                idleTimeLimit: 2,
-                autoPlay: true,  
-                poster: 'npt:1:23'
-            },  document.getElementById('startVideo'));
 
-            player.addEventListener('input', ({ data }) => {
-                // this is fired 125 milliseconds ahead of the original key press time
-                playSound(data);
-            })
-        </script>
-    </body>
+<head>
+    <title>CyberWriteUps </title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.fluid.classless.red.min.css">
+    <link rel="stylesheet" href="src/main.css">
+    <link href="src/lib/asciinema-player.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main class="container">
+        <h1>Cyber Write-ups</h1>
+        <details name="hackerlabs">
+            <summary>HackerLabs</summary>
+
+
+            <details name="sedition">
+                <summary>Sedition</summary>
+
+                <div id="sedition">
+                    <article>Scanning & Enumeration demostration<article>
+                            <div id="startVideo"></div>
+                </div>
+            </details>
+        </details>
+
+
+    </main>
+
+    <script src="src/lib/asciinema-player.min.js"></script>
+
+    <script>
+        const player = AsciinemaPlayer.create({
+            url: 'assets/sedition.cast',
+            speed: 100,
+            inputOffset: -0.125,
+            theme: 'dracula',
+            startAt: 123
+        }, document.getElementById('startVideo'));
+
+        player.addEventListener('input', ({ data }) => {
+            // this is fired 125 milliseconds ahead of the original key press time
+            playSound(data);
+        })
+    </script>
+</body>
+
 </html>
