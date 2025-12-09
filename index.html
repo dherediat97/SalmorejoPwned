@@ -15,13 +15,13 @@
 <body>
     <main class="container">
         <h1>Cyber Write-ups</h1>
-        <details name="hackerlabs">
+        <details name="hackerlabs" open>
             <summary>HackerLabs</summary>
             <details name="papaya">
                 <summary>Papaya</summary>
 
                 <div id="papaya">
-                    <div id="papayaWriteUp"></div>
+                    <div id="papayaWriteUp" data-cast="assets/papaya.cast" class="writeUp"></div>
                 </div>
             </details>
 
@@ -29,7 +29,7 @@
                 <summary>Sedition</summary>
 
                 <div id="sedition">
-                    <div id="seditionWriteUp"></div>
+                    <div id="seditionWriteUp" data-cast="assets/sedition.cast" class="writeUp"></div>
                 </div>
             </details>
         </details>
@@ -39,10 +39,16 @@
 
     <script src="src/lib/asciinema-player.min.js"></script>
     <script>
-        const player = AsciinemaPlayer.create({
-            url: 'assets/papaya.cast',
-            theme: 'dracula',
-        }, document.getElementById('papayaWriteUp'));
+        const htmlElements = document.getElementsByClassName('writeUp');
+
+        for (const htmlElement of htmlElements) {
+            const player = AsciinemaPlayer.create({
+                url: htmlElement.getAttribute('data-cast'),
+                theme: 'dracula',
+            }, htmlElement);
+        }
+
+
     </script>
 </body>
 
