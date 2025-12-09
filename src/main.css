@@ -6,11 +6,7 @@
   }
 
   h1 {
-      --pico-font-family: "Calibri";
-      --pico-font-weight: 400;
+      --pico-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      --pico-font-weight: 800;
       --pico-typography-spacing-vertical: 0.5rem;
-  }
-
-  button {
-      --pico-font-weight: 700;
   }
