@@ -29,7 +29,7 @@
                 <summary>Sedition</summary>
 
                 <div id="sedition">
-                    <!-- <div id="startVideo"></div> -->
+                    <div id="seditionWriteUp"></div>
                 </div>
             </details>
         </details>
@@ -38,19 +38,11 @@
     </main>
 
     <script src="src/lib/asciinema-player.min.js"></script>
-
     <script>
         const player = AsciinemaPlayer.create({
             url: 'assets/papaya.cast',
-            speed: 100,
             theme: 'dracula',
-            startAt: 123
         }, document.getElementById('papayaWriteUp'));
-
-        player.addEventListener('input', ({ data }) => {
-            // this is fired 125 milliseconds ahead of the original key press time
-            playSound(data);
-        })
     </script>
 </body>
 
