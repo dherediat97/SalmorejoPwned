@@ -17,14 +17,19 @@
         <h1>Cyber Write-ups</h1>
         <details name="hackerlabs">
             <summary>HackerLabs</summary>
+            <details name="papaya">
+                <summary>Papaya</summary>
 
+                <div id="papaya">
+                    <div id="papayaWriteUp"></div>
+                </div>
+            </details>
 
             <details name="sedition">
                 <summary>Sedition</summary>
 
                 <div id="sedition">
-                    <article>Scanning & Enumeration demostration<article>
-                            <div id="startVideo"></div>
+                    <!-- <div id="startVideo"></div> -->
                 </div>
             </details>
         </details>
@@ -36,12 +41,11 @@
 
     <script>
         const player = AsciinemaPlayer.create({
-            url: 'assets/sedition.cast',
+            url: 'assets/papaya.cast',
             speed: 100,
-            inputOffset: -0.125,
             theme: 'dracula',
             startAt: 123
-        }, document.getElementById('startVideo'));
+        }, document.getElementById('papayaWriteUp'));
 
         player.addEventListener('input', ({ data }) => {
             // this is fired 125 milliseconds ahead of the original key press time
