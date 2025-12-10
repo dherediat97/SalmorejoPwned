@@ -17,10 +17,10 @@
             <h1>CyberWriteUps</h1>
             <nav>
                 <ul>
-                    <li><a href="../index.html#thehackerlabs">TheHackerLabs</a></li>
-                    <li><a href="../index.html#cyberdefenders">CyberDefenders</a></li>
-                    <li><a href="../index.html#pwned">Pwned</a></li>
-                    <li><a href="../index.html#hackthebox">HackTheBox</a></li>
+                    <li><a href="/index.html#thehackerlabs">TheHackerLabs</a></li>
+                    <li><a href="/index.html#cyberdefenders">CyberDefenders</a></li>
+                    <li><a href="/index.html#pwned">Pwned</a></li>
+                    <li><a href="/index.html#hackthebox">HackTheBox</a></li>
                 </ul>
             </nav>
         </hgroup>
@@ -41,7 +41,7 @@
         const writeUpSelected = document.location.hash.substring(1);
         const writeUpDiv = document.getElementById('writeUp');
 
-        AsciinemaPlayer.create('/assets/' + writeUpSelected + '.cast', writeUpDiv, {
+        AsciinemaPlayer.create('assets/' + writeUpSelected + '.cast', writeUpDiv, {
             speed: 4,
             idleTimeLimit: 10,
         });
