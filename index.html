@@ -4,7 +4,7 @@
     <title>CyberWriteUps </title>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.fluid.classless.red.min.css">
@@ -13,29 +13,129 @@
 </head>
 
 <body>
+    <header class="container">
+        <hgroup>
+            <h1>CyberWriteUps</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html#thehackerlabs">TheHackerLabs</a></li>
+                    <li><a href="index.html#cyberdefenders">CyberDefenders</a></li>
+                    <li><a href="index.html#pwned">Pwned</a></li>
+                    <li><a href="index.html#hackthebox">HackTheBox</a></li>
+                </ul>
+            </nav>
+        </hgroup>
+    </header>
+
     <main class="container">
-        <h1>Cyber Write-ups</h1>
-        <details name="hackerlabs" open>
-            <summary>HackerLabs</summary>
-            <details name="papaya">
-                <summary>Papaya</summary>
-
-                <div id="papaya">
-                    <div id="papayaWriteUp" data-cast="assets/papaya.cast" class="writeUp"></div>
-                </div>
+        <div id="thehackerlabs">
+            <h2>TheHackerLabs</h2>
+            <div id="thehackerlabs">
+                <summary>
+                    <details name="forense">
+                        <summary>Defensive</summary>
+                        <div>
+                            <article id="article">
+                                <h3>No CTF's Found</h3>
+                            </article>
+                        </div>
+                    </details>
+                </summary>
+                <details name="offensive">
+                    <summary>Offensive</summary>
+                    <a href="write-up.html#papaya">Papaya</a>
+                    <a href="write-up.html#sedition">Sedition</a>
+            </div>
             </details>
+            </summary>
+            <summary>
+                <details name="forense">
+                    <summary>Android</summary>
+                    <div>
+                        <article id="article">
+                            <h3>No CTF's Found</h3>
+                        </article>
+                    </div>
+                </details>
+            </summary>
+            <summary>
+                <details name="forense">
+                    <summary>Forense</summary>
+                    <div>
+                        <article id="article">
+                            <h3>No CTF's Found</h3>
+                        </article>
+                    </div>
+                </details>
+            </summary>
+            <summary>
+                <details name="forense">
+                    <summary>Reversing</summary>
+                    <div>
+                        <article id="article">
+                            <h3>No CTF's Found</h3>
+                        </article>
+                    </div>
+                </details>
+            </summary>
+            <summary>
+                <details name="forense">
+                    <summary>IA Hacking</summary>
+                    <div>
+                        <article id="article">
+                            <h3>No CTF's Found</h3>
+                        </article>
+                    </div>
+                </details>
+            </summary>
+        </div>
+        </div>
 
-            <details name="sedition">
-                <summary>Sedition</summary>
+        <div id="cyberdefenders">
+            <h2>CyberDefenders</h2>
+            <summary>
+                <details name="forense">
+                    <summary>Forense</summary>
+                    <div>
+                        <article id="article">
+                            <h3>No CTF's Found</h3>
+                        </article>
+                    </div>
+                </details>
+            </summary>
+        </div>
 
-                <div id="sedition">
-                    <div id="seditionWriteUp" data-cast="assets/sedition.cast" class="writeUp"></div>
-                </div>
-            </details>
-        </details>
-
-
+        <div id="pwned">
+            <h2>Pwned</h2>
+            <summary>
+                <details name="offensive">
+                    <summary>Offensive</summary>
+                    <div>
+                        <article id="article">
+                            <h3>No CTF's Found</h3>
+                        </article>
+                    </div>
+                </details>
+            </summary>
+        </div>
+        <div id="hackthebox">
+            <h2>HackTheBox</h2>
+            <summary>
+                <details name="offensive">
+                    <summary>Offensive</summary>
+                    <div>
+                        <article id="article">
+                            <h3>No CTF's Found</h3>
+                        </article>
+                    </div>
+                </details>
+            </summary>
+        </div>
     </main>
+
+    <footer class="container">
+        <p>Made with ❤️ by <a href="http://github.com/dherediat97">dherediat97</a></p>
+    </footer>
 
     <script src="src/lib/asciinema-player.min.js"></script>
     <script>
@@ -47,8 +147,6 @@
                 theme: 'dracula',
             }, htmlElement);
         }
-
-
     </script>
 </body>
 

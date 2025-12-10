@@ -4,15 +4,3 @@
       --pico-form-element-spacing-vertical: 1rem;
       --pico-form-element-spacing-horizontal: 1.25rem;
   }
-
-  h1 {
-      --pico-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      --pico-font-weight: 800;
-      --pico-typography-spacing-vertical: 0.5rem;
-  }
-
-  .writeUp {
-      height: 20%;
-      width: 80%;
-      margin: 0 auto;
-  }

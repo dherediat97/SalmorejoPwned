@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberWriteUps - Write Up</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.fluid.classless.red.min.css">
+    <link rel="stylesheet" href="src/main.css">
+    <link href="src/lib/asciinema-player.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="container">
+        <hgroup>
+            <h1>CyberWriteUps</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html#thehackerlabs">TheHackerLabs</a></li>
+                    <li><a href="index.html#cyberdefenders">CyberDefenders</a></li>
+                    <li><a href="index.html#pwned">Pwned</a></li>
+                    <li><a href="index.html#hackthebox">HackTheBox</a></li>
+                </ul>
+            </nav>
+        </hgroup>
+    </header>
+
+    <main class="container">
+        <div id="sedition">
+            <div id="writeUp"></div>
+        </div>
+    </main>
+
+    <footer class="container">
+        <p>Made with ❤️ by <a href="http://github.com/dherediat97">dherediat97</a></p>
+    </footer>
+
+    <script src="src/lib/asciinema-player.min.js"></script>
+    <script>
+        const writeUpSelected = document.location.hash.substring(1);
+        const writeUpDiv = document.getElementById('writeUp');
+
+        const player = AsciinemaPlayer.create({
+            url: 'assets/' + writeUpSelected + '.cast',
+            theme: 'dracula',
+        }, writeUpDiv);
+
+    </script>
+</body>
