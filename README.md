@@ -7,7 +7,7 @@
 ToDO List:
 - [x] Hacer algunos CTFS de HackerLabs.
 - [ ] Añadir CTFS en CyberDefenders y HackTheBox.
-- [ ] Añadir videos en formato [ascii](https://asciinema.org/).
+- [x] Añadir videos en formato [ascii](https://asciinema.org/).
 - [ ] Añadir referencias en cada CTF.
 
 
