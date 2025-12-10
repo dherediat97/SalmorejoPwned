@@ -43,8 +43,8 @@
                 </summary>
                 <details name="offensive">
                     <summary>Offensive</summary>
-                    <a href="write-up.html#papaya">Papaya</a>
-                    <a href="write-up.html#sedition">Sedition</a>
+                    <a href="src/write-up.html#papaya">Papaya</a>
+                    <a href="src/write-up.html#sedition">Sedition</a>
             </div>
             </details>
             </summary>
@@ -136,18 +136,6 @@
     <footer class="container">
         <p>Made with ❤️ by <a href="http://github.com/dherediat97">dherediat97</a></p>
     </footer>
-
-    <script src="src/lib/asciinema-player.min.js"></script>
-    <script>
-        const htmlElements = document.getElementsByClassName('writeUp');
-
-        for (const htmlElement of htmlElements) {
-            const player = AsciinemaPlayer.create({
-                url: htmlElement.getAttribute('data-cast'),
-                theme: 'dracula',
-            }, htmlElement);
-        }
-    </script>
 </body>
 
 </html>
