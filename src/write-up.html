@@ -1,50 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="color-scheme" content="light dark">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CyberWriteUps - Write Up</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.fluid.classless.red.min.css">
+    <link rel="stylesheet" href="lib/pico.fluid.classless.min.css">
+    <link rel="stylesheet" href="lib/asciinema-player.css" />
     <link rel="stylesheet" href="main.css">
-    <link href="lib/asciinema-player.css" rel="stylesheet" />
+    <style>
+        #writeUp {
+            width: 80vw !important;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 
 <body>
-    <header class="container">
-        <hgroup>
-            <h1>CyberWriteUps</h1>
-            <nav>
-                <ul>
-                    <li><a href="/index.html#thehackerlabs">TheHackerLabs</a></li>
-                    <li><a href="/index.html#cyberdefenders">CyberDefenders</a></li>
-                    <li><a href="/index.html#pwned">Pwned</a></li>
-                    <li><a href="/index.html#hackthebox">HackTheBox</a></li>
-                </ul>
-            </nav>
-        </hgroup>
-    </header>
-
-    <main class="container-fluid">
-        <div id="sedition">
-            <div id="writeUp"></div>
-        </div>
+    <main class="container">
+        <nav>
+            <ul>
+                <li><strong>CyberWriteUps</strong></li>
+            </ul>
+            <ul>
+                <li><a href="/#thehackerlabs">TheHackerLabs</a></li>
+                <li><a href="/#cyberdefenders">CyberDefenders</a></li>
+                <li><a href="/#pwned">Pwned</a></li>
+                <li><a href="/#hackthebox">HackTheBox</a></li>
+                <li>
+                    <select name="selectLanguage" aria-label="Select language" id="selectLanguage">
+                        <option selected value="es">Español</option>
+                        <option value="en">English</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+        <nav aria-label="breadcrumb">
+            <ul>
+                <li><a href="#">TheHackerLabs</a></li>
+                <li><a href="#" class="offensive-title">Offensive</a></li>
+                <li class="ctfName"></li>
+            </ul>
+        </nav>
+        <div id="writeUp"></div>
     </main>
 
-    <footer class="container-fluid">
+    <footer class="container">
         <p>Made with ❤️ by <a href="http://github.com/dherediat97">dherediat97</a></p>
     </footer>
 
     <script src="lib/asciinema-player.min.js"></script>
-    <script>
-        const writeUpSelected = document.location.hash.substring(1);
-        const writeUpDiv = document.getElementById('writeUp');
-
-        AsciinemaPlayer.create('assets/' + writeUpSelected + '.cast', writeUpDiv, {
-            speed: 4,
-            idleTimeLimit: 10,
-        });
-
-    </script>
+    <script src="video.js"></script>
+    <script src="i18n.js"></script>
 </body>

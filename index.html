@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 
 <head>
     <title>CyberWriteUps </title>
@@ -7,44 +8,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.fluid.classless.red.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.fluid.classless.min.css">
     <link rel="stylesheet" href="src/main.css">
     <link href="src/lib/asciinema-player.css" rel="stylesheet" />
 </head>
 
 <body>
-    <header class="container">
-        <hgroup>
-            <h1>CyberWriteUps</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html#thehackerlabs">TheHackerLabs</a></li>
-                    <li><a href="index.html#cyberdefenders">CyberDefenders</a></li>
-                    <li><a href="index.html#pwned">Pwned</a></li>
-                    <li><a href="index.html#hackthebox">HackTheBox</a></li>
-                </ul>
-            </nav>
-        </hgroup>
-    </header>
-
     <main class="container">
+        <nav>
+            <ul>
+                <li><strong>CyberWriteUps</strong></li>
+            </ul>
+            <ul>
+                <li><a href="index.html#thehackerlabs">TheHackerLabs</a></li>
+                <li><a href="index.html#cyberdefenders">CyberDefenders</a></li>
+                <li><a href="index.html#pwned">Pwned</a></li>
+                <li><a href="index.html#hackthebox">HackTheBox</a></li>
+                <li>
+                    <select name="selectLanguage" aria-label="Select language" id="selectLanguage">
+                        <option selected value="es">Español</option>
+                        <option value="en">English</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+
         <div id="thehackerlabs">
             <h2>TheHackerLabs</h2>
             <div id="thehackerlabs">
                 <summary>
-                    <details name="forense">
-                        <summary>Defensive</summary>
+                    <details name="defensive">
+                        <summary class="defensive-title"></summary>
                         <div>
-                            <article id="article">
+                            <article id="article" class="no-ctf">
                                 <h3>No CTF's Found</h3>
                             </article>
                         </div>
                     </details>
                 </summary>
                 <details name="offensive">
-                    <summary>Offensive</summary>
-                    <a href="src/write-up.html#papaya">Papaya</a>
-                    <a href="src/write-up.html#sedition">Sedition</a>
+                    <summary class="offensive-title"></summary>
+                    <article>
+                        <header>Papaya</header>
+                        <img src="https://labs.thehackerslabs.com/static/uploads/machines/papaya.png"
+                            alt="Papaya CTF TheHackerLabs" width="100" height="200">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="level-title">Level</th>
+                                    <th scope="col" class="categories-title">Categories</th>
+                                    <th scope="col" class="creator-title">Creator</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Easy</th>
+                                    <td>Linux, Offensive Security</td>
+                                    <td>condor & CuriosidadesDeHackers</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a href="src/write-up.html#papaya"> Show Write-Up</a>
+                    </article>
+
+                    <article>
+                        <header>Sedition</header>
+
+                        <div class="grid">
+                            <div> <img src="https://labs.thehackerslabs.com/static/uploads/machines/sedition.jpg"
+                                    alt="Sedition CTF TheHackerLabs" width="100" height="200"></div>
+                            <div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="level-title">Level</th>
+                                            <th scope="col" class="categories-title">Categories</th>
+                                            <th scope="col" class="creator-title">Creator</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" class="easy-title">Easy</th>
+                                            <td>Linux, Offensive Security</td>
+                                            <td>El Pingüino de Mario</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <a href="src/write-up.html#sedition"> Show Write-Up</a>
+                    </article>
             </div>
             </details>
             </summary>
@@ -136,6 +189,7 @@
     <footer class="container">
         <p>Made with ❤️ by <a href="http://github.com/dherediat97">dherediat97</a></p>
     </footer>
+    <script src="src/i18n.js"></script>
 </body>
 
 </html>
