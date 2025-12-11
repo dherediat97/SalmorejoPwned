@@ -24,19 +24,39 @@ function changeLanguage(language) {
 
 //Set the strings in the HTML
 function setStrings(response) {
-    const defensiveTitle = document.querySelector(".defensive-title");
-    const offensiveTitle = document.querySelector(".offensive-title");
+    const defensiveTitle = document.querySelectorAll(".defensive-title");
+    const offensiveTitle = document.querySelectorAll(".offensive-title");
     const levelTitle = document.querySelectorAll(".level-title");
     const categoriesTitle = document.querySelectorAll(".categories-title");
     const creatorTitle = document.querySelectorAll(".creator-title");
     const easyTitle = document.querySelectorAll(".easy-title");
+    const showWriteUpTitle = document.querySelectorAll(".show-write-up-title");
+    const noCtfTitle = document.querySelectorAll(".no-ctf-title");
 
     response.json().then((data) => {
-        defensiveTitle.textContent = data.defensive;
-        offensiveTitle.textContent = data.offensive;
-        creatorTitle.textContent = data.creator;
-        levelTitle.textContent = data.level;
-        categoriesTitle.textContent = data.categories;
-        easyTitle.textContent = data.easy;
+        defensiveTitle.forEach(element => {
+            element.textContent = data.defensive;
+        });
+        offensiveTitle.forEach(element => {
+            element.textContent = data.offensive;
+        });
+        creatorTitle.forEach(element => {
+            element.textContent = data.creator;
+        });
+        levelTitle.forEach(element => {
+            element.textContent = data.level;
+        });
+        categoriesTitle.forEach(element => {
+            element.textContent = data.categories;
+        });
+        easyTitle.forEach(element => {
+            element.textContent = data.easy;
+        });
+        showWriteUpTitle.forEach(element => {
+            element.textContent = data.show_write_up;
+        });
+        noCtfTitle.forEach(element => {
+            element.textContent = data.no_ctf_title;
+        });
     }); 
 }

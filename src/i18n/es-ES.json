@@ -5,10 +5,10 @@
     "websecurity": "Seguridad Web",
     "cryptography": "Criptografía",
     "writeups": "WriteUps",
-    "aboutme": "Sobre mí",
+    "about_me": "Sobre mí",
     "contact": "Contacto",
-    "searchplaceholder": "Buscar...",
-    "latestwriteups": "Últimos WriteUps",
+    "search_placeholder": "Buscar...",
+    "latest_writeups": "Últimos WriteUps",
     "level": "Dificultad",
     "categories": "Categorías",
     "creator": "Creador",
@@ -18,8 +18,10 @@
     "advanced": "Avanzado",
     "tags": "Etiquetas",
     "archives": "Archivos",
-    "noresults": "No se encontraron resultados.",
-    "readmore": "Leer más",
+    "no_results": "No se encontraron resultados.",
+    "read_more": "Leer más",
     "backtotop": "Volver arriba",
-    "language": "Idioma"
+    "language": "Idioma",
+    "show_write_up": "Mostrar",
+    "no_ctf_title": "No se encontraron CTF's"
 }

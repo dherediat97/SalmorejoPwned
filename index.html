@@ -2,13 +2,13 @@
 <html lang="en" data-theme="dark">
 
 <head>
-    <title>CyberWriteUps </title>
+    <title>CyberWriteUps</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.fluid.classless.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.red.min.css">
     <link rel="stylesheet" href="src/main.css">
     <link href="src/lib/asciinema-player.css" rel="stylesheet" />
 </head>
@@ -23,7 +23,6 @@
                 <li><a href="index.html#thehackerlabs">TheHackerLabs</a></li>
                 <li><a href="index.html#cyberdefenders">CyberDefenders</a></li>
                 <li><a href="index.html#pwned">Pwned</a></li>
-                <li><a href="index.html#hackthebox">HackTheBox</a></li>
                 <li>
                     <select name="selectLanguage" aria-label="Select language" id="selectLanguage">
                         <option selected value="es">Español</option>
@@ -40,8 +39,8 @@
                     <details name="defensive">
                         <summary class="defensive-title"></summary>
                         <div>
-                            <article id="article" class="no-ctf">
-                                <h3>No CTF's Found</h3>
+                            <article id="article">
+                                <h3 class="no-ctf-title"></h3>
                             </article>
                         </div>
                     </details>
@@ -50,63 +49,73 @@
                     <summary class="offensive-title"></summary>
                     <article>
                         <header>Papaya</header>
-                        <img src="https://labs.thehackerslabs.com/static/uploads/machines/papaya.png"
-                            alt="Papaya CTF TheHackerLabs" width="100" height="200">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th scope="col" class="level-title">Level</th>
-                                    <th scope="col" class="categories-title">Categories</th>
-                                    <th scope="col" class="creator-title">Creator</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Easy</th>
-                                    <td>Linux, Offensive Security</td>
-                                    <td>condor & CuriosidadesDeHackers</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <a href="src/write-up.html#papaya"> Show Write-Up</a>
+                        <div class="grid">
+                            <div>
+                                <img src="https://labs.thehackerslabs.com/static/uploads/machines/papaya.png"
+                                    alt="Papaya CTF TheHackerLabs" width="200" height="300">
+                            </div>
+
+                            <div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="level-title"></th>
+                                            <th scope="col" class="categories-title"></th>
+                                            <th scope="col" class="creator-title"></th>
+                                            <th scope="col" class="write-up-title">Write-Up</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" class="easy-title"></th>
+                                            <td>Linux, Offensive Security</td>
+                                            <td>condor & CuriosidadesDeHackers</td>
+                                            <td><a href="src/write-up.html#papaya" class="show-write-up-title"></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </article>
 
                     <article>
                         <header>Sedition</header>
 
                         <div class="grid">
-                            <div> <img src="https://labs.thehackerslabs.com/static/uploads/machines/sedition.jpg"
-                                    alt="Sedition CTF TheHackerLabs" width="100" height="200"></div>
+                            <div>
+                                <img src="https://labs.thehackerslabs.com/static/uploads/machines/sedition.jpg"
+                                    alt="Sedition CTF TheHackerLabs" width="200" height="300">
+                            </div>
                             <div>
                                 <table>
                                     <thead>
                                         <tr>
-                                            <th scope="col" class="level-title">Level</th>
-                                            <th scope="col" class="categories-title">Categories</th>
-                                            <th scope="col" class="creator-title">Creator</th>
+                                            <th scope="col" class="level-title"></th>
+                                            <th scope="col" class="categories-title"></th>
+                                            <th scope="col" class="creator-title"></th>
+                                            <th scope="col" class="write-up-title">Write-Up</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <th scope="row" class="easy-title">Easy</th>
+                                            <th scope="row" class="easy-title"></th>
                                             <td>Linux, Offensive Security</td>
                                             <td>El Pingüino de Mario</td>
+                                            <td><a href="src/write-up.html#sedition" class="show-write-up-title"></a>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                        <a href="src/write-up.html#sedition"> Show Write-Up</a>
                     </article>
             </div>
-            </details>
-            </summary>
             <summary>
-                <details name="forense">
+                <details name="android">
                     <summary>Android</summary>
                     <div>
                         <article id="article">
-                            <h3>No CTF's Found</h3>
+                            <h3 class="no-ctf-title"></h3>
                         </article>
                     </div>
                 </details>
@@ -116,27 +125,27 @@
                     <summary>Forense</summary>
                     <div>
                         <article id="article">
-                            <h3>No CTF's Found</h3>
+                            <h3 class="no-ctf-title"></h3>
                         </article>
                     </div>
                 </details>
             </summary>
             <summary>
-                <details name="forense">
+                <details name="reversing">
                     <summary>Reversing</summary>
                     <div>
                         <article id="article">
-                            <h3>No CTF's Found</h3>
+                            <h3 class="no-ctf-title"></h3>
                         </article>
                     </div>
                 </details>
             </summary>
             <summary>
-                <details name="forense">
+                <details name="ia-hacking">
                     <summary>IA Hacking</summary>
                     <div>
                         <article id="article">
-                            <h3>No CTF's Found</h3>
+                            <h3 class="no-ctf-title"></h3>
                         </article>
                     </div>
                 </details>
@@ -151,7 +160,7 @@
                     <summary>Forense</summary>
                     <div>
                         <article id="article">
-                            <h3>No CTF's Found</h3>
+                            <h3 class="no-ctf-title"></h3>
                         </article>
                     </div>
                 </details>
@@ -162,10 +171,10 @@
             <h2>Pwned</h2>
             <summary>
                 <details name="offensive">
-                    <summary>Offensive</summary>
+                    <summary class="offensive-title"></summary>
                     <div>
                         <article id="article">
-                            <h3>No CTF's Found</h3>
+                            <h3 class="no-ctf-title"></h3>
                         </article>
                     </div>
                 </details>
@@ -175,10 +184,10 @@
             <h2>HackTheBox</h2>
             <summary>
                 <details name="offensive">
-                    <summary>Offensive</summary>
+                    <summary class="offensive-title"></summary>
                     <div>
                         <article id="article">
-                            <h3>No CTF's Found</h3>
+                            <h3 class="no-ctf-title"></h3>
                         </article>
                     </div>
                 </details>
