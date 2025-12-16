@@ -5,10 +5,12 @@
             "author": "El Pingüino de Mario",
             "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/sedition.jpg",
             "url": "src/write-up.html#sedition",
+            "web": "The Hacker Labs",
             "level": "easy",
             "categories": [
                 "offensive",
-                "web"
+                "web",
+                "linux"
             ]
         },
         {
@@ -16,9 +18,12 @@
             "author": "condor & CuriosidadesDeHackers",
             "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/papaya.png",
             "url": "src/write-up.html#papaya",
+            "web": "The Hacker Labs",
             "level": "easy",
             "categories": [
-                "forensics"
+                "offensive",
+                "web",
+                "linux"
             ]
         },
         {
@@ -26,10 +31,12 @@
             "author": "condor & CuriosidadesDeHackers",
             "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/wachtsote.png",
             "url": "src/write-up.html#watchstore",
-            "level": "medium",
+            "web": "The Hacker Labs",
+            "level": "easy",
             "categories": [
                 "offensive",
-                "web"
+                "web",
+                "linux"
             ]
         }
     ]

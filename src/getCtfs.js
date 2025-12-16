@@ -14,7 +14,7 @@ function getCtfs() {
                         <div class="grid">
                             <div>
                                 <img src="${ctf.img_url}"
-                                    alt="${ctf.title} CTF TheHackerLabs" width="200" height="300">
+                                    alt="${ctf.title}" width="200" height="300">
                             </div>
                             <div>
                                 <table>
@@ -28,7 +28,7 @@ function getCtfs() {
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <th scope="row" class="easy-title"></th>
+                                            <th scope="row" class="${ctf.level}-title"></th>
                                             <td>${ctf.categories}</td>
                                             <td>${ctf.author}</td>
                                             <td><a href="${ctf.url}" class="show-write-up-title"></a>
