@@ -1,0 +1,36 @@
+{
+    "writeups": [
+        {
+            "title": "Sedition",
+            "author": "El Pingüino de Mario",
+            "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/sedition.jpg",
+            "url": "src/write-up.html#sedition",
+            "level": "easy",
+            "categories": [
+                "offensive",
+                "web"
+            ]
+        },
+        {
+            "title": "Papaya",
+            "author": "condor & CuriosidadesDeHackers",
+            "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/papaya.png",
+            "url": "src/write-up.html#papaya",
+            "level": "easy",
+            "categories": [
+                "forensics"
+            ]
+        },
+        {
+            "title": "WatchStore",
+            "author": "condor & CuriosidadesDeHackers",
+            "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/wachtsote.png",
+            "url": "src/write-up.html#watchstore",
+            "level": "medium",
+            "categories": [
+                "offensive",
+                "web"
+            ]
+        }
+    ]
+}
