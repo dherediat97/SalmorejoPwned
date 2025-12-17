@@ -1,3 +1,6 @@
+const CONFIG_URL = 'src/config.json';
+
+
 const writeUpSelected = document.location.hash.substring(1);
 
 const ctfNameElement = document.querySelector('.ctfName');

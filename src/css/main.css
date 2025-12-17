@@ -1,0 +1,54 @@
+  :root {
+    --pico-border-radius: 2rem;
+    --pico-typography-spacing-vertical: 1.5rem;
+    --pico-form-element-spacing-vertical: 1rem;
+    --pico-form-element-spacing-horizontal: 1.25rem;
+    --pico-font-family: Cascadia Code;
+  }
+
+  .ctf-writeup-card {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 8rem;
+    margin: 0 auto;
+  }
+
+
+  .ctf-name {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-align: end;
+    text-transform: uppercase;
+  }
+
+  .ctf-level {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-align: end;
+    text-transform: uppercase;
+  }
+
+  .ctf-level.easy {
+    background-color: #4CAF50;
+    padding: 0.5rem;
+    border-radius: var(--pico-border-radius);
+  }
+
+  .ctf-level.medium {
+    background-color: #FF9800;
+    padding: 0.5rem;
+    border-radius: var(--pico-border-radius);
+  }
+
+  .ctf-level.hard {
+    background-color: #F44336;
+    padding: 0.5rem;
+    border-radius: var(--pico-border-radius);
+  }
+
+  .ctf-write-up a {
+    text-align: center;
+  }

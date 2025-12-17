@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.red.min.css">
-    <link rel="stylesheet" href="src/main.css">
-    <link href="src/lib/asciinema-player.css" rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/pico.green.min.css">
+    <link rel="stylesheet" href="src/css/pico.colors.min.css">
+    <link rel="stylesheet" href="src/css/main.css">
 </head>
 
 <body>
@@ -31,22 +31,10 @@
 
         <div id="thehackerlabs">
             <h2>TheHackerLabs</h2>
-            <div id="thehackerlabs">
-                <summary>
-                    <details name="defensive">
-                        <summary class="defensive-title"></summary>
-                        <div>
-                            <article id="article">
-                                <h3 class="no-ctf-title"></h3>
-                            </article>
-                        </div>
-                    </details>
-                </summary>
-                <details name="offensive">
-                    <summary class="offensive-title"></summary>
-                    <div id="hacker-labs-write-ups"></div>
-                </details>
-            </div>
+            <details name="offensive">
+                <summary class="offensive-title"></summary>
+                <div id="hacker-labs-write-ups"></div>
+            </details>
             <summary>
                 <details name="android">
                     <summary>Android</summary>
@@ -88,55 +76,14 @@
                 </details>
             </summary>
         </div>
-        </div>
-
-        <div id="cyberdefenders">
-            <h2>CyberDefenders</h2>
-            <summary>
-                <details name="forense">
-                    <summary>Forense</summary>
-                    <div>
-                        <article id="article">
-                            <h3 class="no-ctf-title"></h3>
-                        </article>
-                    </div>
-                </details>
-            </summary>
-        </div>
-
-        <div id="pwned">
-            <h2>Pwned</h2>
-            <summary>
-                <details name="offensive">
-                    <summary class="offensive-title"></summary>
-                    <div>
-                        <article id="article">
-                            <h3 class="no-ctf-title"></h3>
-                        </article>
-                    </div>
-                </details>
-            </summary>
-        </div>
-        <div id="hackthebox">
-            <h2>HackTheBox</h2>
-            <summary>
-                <details name="offensive">
-                    <summary class="offensive-title"></summary>
-                    <div>
-                        <article id="article">
-                            <h3 class="no-ctf-title"></h3>
-                        </article>
-                    </div>
-                </details>
-            </summary>
-        </div>
     </main>
 
-    <footer class="container">
-        <p>Made with ❤️ by <a href="http://github.com/dherediat97">dherediat97</a></p>
-    </footer>
-    <script src="src/getCtfs.js"></script>
-    <script src="src/i18n.js"></script>
+    <div id="footer"></div>
+
+
+    <script src="src/js/get_ctfs.js"></script>
+    <script src="src/js/i18n.js"></script>
+    <script src="src/js/footer.js"></script>
 </body>
 
 </html>
