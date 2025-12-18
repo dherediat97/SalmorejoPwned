@@ -2,6 +2,25 @@ const CONFIG_URL = 'src/json/config.json';
 
 getCtfs();
 
+const typeCtf = document.location.hash.substring(1).split("#")[1];
+if(typeCtf == "offensive"){
+    const offensiveDetails = document.getElementById("offensive-ctfs");
+    offensiveDetails.open = true;
+}else if(typeCtf == "android"){
+    const androidDetails = document.getElementById("android-ctfs");
+    androidDetails.open = true;
+}else if(typeCtf == "forense"){
+    const forenseDetails = document.getElementById("forense-ctfs");
+    forenseDetails.open = true;
+}
+else if(typeCtf == "reversing"){
+    const reversingDetails = document.getElementById("reversing-ctfs");
+    reversingDetails.open = true;
+}else if(typeCtf == "ia-hacking"){
+    const iaHackingDetails = document.getElementById("ia-hacking-ctfs");
+    iaHackingDetails.open = true;
+}
+
 function getCtfs() {
         fetch(CONFIG_URL).then((response) => {
             if (response.ok) {
