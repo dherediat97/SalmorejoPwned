@@ -16,21 +16,44 @@
     margin-top: 2rem;
   }
 
+  .ap-button {
+    background-color: #333333;
+    color: white;
+  }
+
+  div.ap-control-bar span.ap-playback-button svg {
+    color: white;
+    background-color: #333333;
+    height: 2px;
+    width: 2px;
+  }
+
 
   .ctf-name {
     color: white;
+    width: 100%;
+    height: auto;
     text-align: center;
+    font-size: 4rem;
+    flex: 1;
     font-weight: bold;
     text-align: end;
     text-transform: uppercase;
   }
 
   .ctf-level {
-    color: white;
+    flex: 1;
+  }
+
+  .ctf-write-up {
     text-align: center;
+    display: flex;
     font-weight: bold;
-    text-align: end;
-    text-transform: uppercase;
+    color: white;
+  }
+
+  .ctf-write-up a {
+    text-align: center;
   }
 
   .ctf-level.easy {
@@ -49,8 +72,4 @@
     background-color: #F44336;
     padding: 0.5rem;
     border-radius: var(--pico-border-radius);
-  }
-
-  .ctf-write-up a {
-    text-align: center;
   }
