@@ -18,7 +18,7 @@ function changeLanguage(language) {
         language = "en-EN";
     }
  
-    fetch(`/i18n/${language}.json`).then((response) => {
+    fetch(`src/json/i18n/${language}.json`).then((response) => {
         setStrings(response);
     });
 }
