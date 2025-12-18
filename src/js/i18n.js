@@ -13,7 +13,11 @@ changeLanguage(currentLanguage);
 
 //Fetch the language file and set the strings   
 function changeLanguage(language) {
-    fetch(`/i18n/${language}.json`).then((response) => {
+    const supportedLanguages = ["en-EN", "es-ES"];
+    if(!supportedLanguages.includes(language)){
+        language = "en-EN";
+    }
+    fetch(!isDevMode?`/i18n/${language}.json`:`CyberWriteUps/i18n/${language}.json`).then((response) => {
         setStrings(response);
     });
 }
@@ -55,4 +59,9 @@ function setStrings(response) {
             element.textContent = data.no_ctf_title;
         });
     }); 
+}
+
+
+function isDevMode(){
+    return !window.location.href.indexOf("localhost") === -1;
 }
