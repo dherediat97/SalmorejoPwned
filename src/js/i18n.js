@@ -17,7 +17,7 @@ function changeLanguage(language) {
     if(!supportedLanguages.includes(language)){
         language = "en-EN";
     }
-    fetch(!isDevMode?`/i18n/${language}.json`:`CyberWriteUps/i18n/${language}.json`).then((response) => {
+    fetch(isDevMode?`/i18n/${language}.json`:`CyberWriteUps/i18n/${language}.json`).then((response) => {
         setStrings(response);
     });
 }
