@@ -17,7 +17,8 @@ function changeLanguage(language) {
     if(!supportedLanguages.includes(language)){
         language = "en-EN";
     }
-    fetch(isDevMode?`/i18n/${language}.json`:`CyberWriteUps/i18n/${language}.json`).then((response) => {
+    const isDevMode = !window.location.href.includes("localhost");
+    fetch(isDevMode ? `/i18n/${language}.json` : `CyberWriteUps/i18n/${language}.json`).then((response) => {
         setStrings(response);
     });
 }
@@ -59,9 +60,4 @@ function setStrings(response) {
             element.textContent = data.no_ctf_title;
         });
     }); 
-}
-
-
-function isDevMode(){
-    return !window.location.href.indexOf("localhost") === -1;
 }
