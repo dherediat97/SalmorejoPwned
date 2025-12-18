@@ -1,8 +1,6 @@
 //Get the browser language
 const currentLanguage = navigator.language;
 
-const baseURL = window.location.origin;
-
 //Change language on select change
 const selectLanguage = document.getElementById("selectLanguage");
 selectLanguage.addEventListener("change", (event) => {
@@ -15,7 +13,8 @@ changeLanguage(currentLanguage);
 
 //Fetch the language file and set the strings   
 function changeLanguage(language) {
-    fetch(baseURL+`/src/i18n/${language}.json`)
+
+    fetch(`/src/i18n/${language}.json`)
         .then((response) => {
             if (response.ok) {
                 setStrings(response);
