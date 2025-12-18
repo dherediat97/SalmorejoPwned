@@ -9,7 +9,7 @@ selectLanguage.addEventListener("change", (event) => {
 });
 
 //Initial language load
-changeLanguage(currentLanguage);
+changeLanguage('en-EN');
 
 //Fetch the language file and set the strings   
 function changeLanguage(language) {
@@ -17,8 +17,8 @@ function changeLanguage(language) {
     if(!supportedLanguages.includes(language)){
         language = "en-EN";
     }
-    const isDevMode = !window.location.href.includes("localhost");
-    fetch(isDevMode ? `/i18n/${language}.json` : `CyberWriteUps/i18n/${language}.json`).then((response) => {
+ 
+    fetch(`/i18n/${language}.json`).then((response) => {
         setStrings(response);
     });
 }
