@@ -13,12 +13,7 @@ changeLanguage(currentLanguage);
 
 //Fetch the language file and set the strings   
 function changeLanguage(language) {
-
-    fetch(`src/i18n/${language}.json`).then((response) => {
-        if(!response.ok){
-            //If the language file doesn't exist, load English
-            return fetch(`src/i18n/en-US.json`);
-        }
+    fetch(`/i18n/${language}.json`).then((response) => {
         setStrings(response);
     });
 }
