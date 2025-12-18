@@ -1,4 +1,4 @@
-const MUSIC_URL = '/src/json/music.json';
+const MUSIC_URL = 'src/json/music.json';
 
 const writeUpParams = document.location.hash.substring(1).split("#");
 const ctfNameElement = document.querySelector('.ctfName');
