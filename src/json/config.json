@@ -35,6 +35,18 @@
                 "web",
                 "linux"
             ]
+        },
+        {
+            "title": "Quokka",
+            "author": "Oscar",
+            "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/quokka.png",
+            "url": "src/write-up.html#quokka",
+            "level": "easy-title",
+            "categories": [
+                "offensive",
+                "smb",
+                "windows"
+            ]
         }
     ]
 }
