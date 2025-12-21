@@ -1,10 +1,13 @@
 {
     "defensive": "Defensive",
     "offensive": "Offensive",
-    "forensics": "Forensics",
+    "forensics": "Digital Forensics",
     "websecurity": "Web Security",
     "cryptography": "Cryptography",
     "writeups": "WriteUps",
+    "android": "Android Hacking",
+    "reversing": "Reversing",
+    "ia_hacking": "AI Hacking",
     "about_me": "About Me",
     "contact": "Contact",
     "search_placeholder": "Search...",
@@ -22,6 +25,9 @@
     "read_more": "Read more",
     "back_to_top": "Back to top",
     "language": "Language",
-    "show_write_up": "Show",
+    "show_write_up": "Show write-up",
+    "made_with": "Made with much",
+    "by": "by",
+    "festive": "Merry Christmas!!",
     "no_ctf_title": "No CTF's Found"
 }

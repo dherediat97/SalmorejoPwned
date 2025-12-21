@@ -1,52 +1,54 @@
-{
-    "writeups": [
-        {
-            "title": "Sedition",
-            "author": "El Pingüino de Mario",
-            "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/sedition.jpg",
-            "url": "src/write-up.html#sedition",
-            "level": "easy-title",
-            "categories": [
-                "offensive",
-                "web",
-                "linux"
-            ]
-        },
-        {
-            "title": "Papaya",
-            "author": "condor & CuriosidadesDeHackers",
-            "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/papaya.png",
-            "url": "src/write-up.html#papaya",
-            "level": "easy-title",
-            "categories": [
-                "offensive",
-                "web",
-                "linux"
-            ]
-        },
-        {
-            "title": "WatchStore",
-            "author": "condor & CuriosidadesDeHackers",
-            "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/wachtsote.png",
-            "url": "src/write-up.html#watchstore",
-            "level": "easy-title",
-            "categories": [
-                "offensive",
-                "web",
-                "linux"
-            ]
-        },
-        {
-            "title": "Quokka",
-            "author": "Oscar",
-            "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/quokka.png",
-            "url": "src/write-up.html#quokka",
-            "level": "easy-title",
-            "categories": [
-                "offensive",
-                "smb",
-                "windows"
-            ]
-        }
-    ]
-}
+[
+    {
+        "title": "Sedition",
+        "author": "El Pingüino de Mario",
+        "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/sedition.jpg",
+        "writeup_url": "src/write-up.html#sedition",
+        "platform": "thehackerlabs",
+        "level": "easy-title",
+        "main_category": "offensive",
+        "tags": [
+            "web",
+            "linux"
+        ]
+    },
+    {
+        "title": "Papaya",
+        "author": "condor & CuriosidadesDeHackers",
+        "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/papaya.png",
+        "writeup_url": "src/write-up.html#papaya",
+        "level": "easy-title",
+        "platform": "thehackerlabs",
+        "main_category": "offensive",
+        "tags": [
+            "web",
+            "linux"
+        ]
+    },
+    {
+        "title": "WatchStore",
+        "author": "condor & CuriosidadesDeHackers",
+        "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/wachtsote.png",
+        "writeup_url": "src/write-up.html#watchstore",
+        "level": "easy-title",
+        "platform": "thehackerlabs",
+        "main_category": "offensive",
+        "tags": [
+            "web",
+            "linux"
+        ]
+    },
+    {
+        "title": "Quokka",
+        "author": "Oscar",
+        "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/quokka.png",
+        "writeup_url": "src/write-up.html#quokka",
+        "level": "easy-title",
+        "platform": "thehackerlabs",
+        "main_category": "offensive",
+        "tags": [
+            "smb",
+            "windows"
+        ]
+    }
+]

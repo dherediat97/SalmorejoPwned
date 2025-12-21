@@ -6,6 +6,18 @@
     --pico-font-family: Cascadia Code;
   }
 
+  .festive-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  #intro {
+    margin: 0 auto;
+    width: 400px;
+  }
+
+
   .ctf-writeup-card {
     background-size: cover;
     background-position: center;

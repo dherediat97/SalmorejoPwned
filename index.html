@@ -3,7 +3,6 @@
 
 <head>
     <title>CyberWriteUps</title>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
@@ -11,83 +10,79 @@
     <link rel="stylesheet" href="src/css/pico.green.min.css">
     <link rel="stylesheet" href="src/css/pico.colors.min.css">
     <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/festive.css">
+    <link rel="stylesheet" href="src/css/asciinema-player.css">
 </head>
 
 <body>
+    <div id="festive"></div>
     <main class="container">
         <nav>
             <ul>
-                <li><strong>CyberWriteUps</strong></li>
+                <li>
+                    <h1><a href="#">CyberWriteUps</a></h1>
+                </li>
             </ul>
             <ul>
                 <li>
                     <select name="selectLanguage" aria-label="Select language" id="selectLanguage">
-                        <option selected value="en">English</option>
-                        <option value="es">Español</option>
+                        <option value="es" selected>Español</option>
+                        <option value="en">English</option>
                     </select>
                 </li>
             </ul>
         </nav>
 
-        <div class="intro">
-
+        <div class="intro-container">
+            <h2 class="festive-title"></h2>
+            <div id="intro"></div>
         </div>
 
+
         <div id="thehackerlabs">
-            <h2>TheHackerLabs</h2>
+            <h3>TheHackerLabs</h3>
+
+            <details name="defensive" id="defensive-ctfs">
+                <summary class="defensive-title"></summary>
+                <div id="thl-defensive-write-ups"></div>
+            </details>
+
             <details name="offensive" id="offensive-ctfs">
                 <summary class="offensive-title"></summary>
-                <div id="hacker-labs-write-ups"></div>
+                <div id="thl-offensive-write-ups"></div>
             </details>
-            <summary>
-                <details name="android" id="android-ctfs">
-                    <summary>Android</summary>
-                    <div>
-                        <article id="article">
-                            <h3 class="no-ctf-title"></h3>
-                        </article>
-                    </div>
-                </details>
-            </summary>
-            <summary>
-                <details name="forense" id="forense-ctfs">
-                    <summary>Forense</summary>
-                    <div>
-                        <article id="article">
-                            <h3 class="no-ctf-title"></h3>
-                        </article>
-                    </div>
-                </details>
-            </summary>
-            <summary>
-                <details name="reversing" id="reversing-ctfs">
-                    <summary>Reversing</summary>
-                    <div>
-                        <article id="article">
-                            <h3 class="no-ctf-title"></h3>
-                        </article>
-                    </div>
-                </details>
-            </summary>
-            <summary>
-                <details name="ia-hacking" id="ia-hacking-ctfs">
-                    <summary>IA Hacking</summary>
-                    <div>
-                        <article id="article">
-                            <h3 class="no-ctf-title"></h3>
-                        </article>
-                    </div>
-                </details>
-            </summary>
+
+            <details name="android" id="android-ctfs">
+                <summary class="android-title"></summary>
+                <div id="thl-android-write-ups"></div>
+            </details>
+
+            <details name="forense" id="forense-ctfs">
+                <summary class="forensics-title"></summary>
+                <div id="thl-forensics-write-ups"></div>
+            </details>
+
+            <details name="reversing" id="reversing-ctfs">
+                <summary class="reversing-title"></summary>
+                <div id="thl-reversing-write-ups"></div>
+            </details>
+
+            <details name="ia-hacking" id="ia-hacking-ctfs">
+                <summary class="ia-hacking-title"></summary>
+                <div id="thl-ia-hacking-write-ups"></div>
+            </details>
         </div>
     </main>
 
     <div id="footer"></div>
 
-
+    <script src="src/js/constants.js"></script>
+    <script src="src/js/asciinema-player.min.js"></script>
+    <script src="src/js/intro.js"></script>
     <script src="src/js/get_ctfs.js"></script>
     <script src="src/js/i18n.js"></script>
     <script src="src/js/footer.js"></script>
+    <script src="src/js/festive.js"></script>
 </body>
 
 </html>

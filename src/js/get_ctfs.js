@@ -1,48 +1,62 @@
-const CONFIG_URL = 'src/json/config.json';
+const typeCtf = document.location.hash.substring(1).split('#')[1];
+openCtfDetails(typeCtf);
 
-getCtfs();
+function openCtfDetails(ctfType) {
+    if (!ctfType) return;
 
-const typeCtf = document.location.hash.substring(1).split("#")[1];
-if(typeCtf == "offensive"){
-    const offensiveDetails = document.getElementById("offensive-ctfs");
-    offensiveDetails.open = true;
-}else if(typeCtf == "android"){
-    const androidDetails = document.getElementById("android-ctfs");
-    androidDetails.open = true;
-}else if(typeCtf == "forense"){
-    const forenseDetails = document.getElementById("forense-ctfs");
-    forenseDetails.open = true;
-}
-else if(typeCtf == "reversing"){
-    const reversingDetails = document.getElementById("reversing-ctfs");
-    reversingDetails.open = true;
-}else if(typeCtf == "ia-hacking"){
-    const iaHackingDetails = document.getElementById("ia-hacking-ctfs");
-    iaHackingDetails.open = true;
+    const ctfDetails = document.getElementById(`${ctfType}-ctfs`);
+    ctfDetails.open = true;
 }
 
 function getCtfs() {
-        fetch(CONFIG_URL).then((response) => {
-            if (response.ok) {
-                response.json().then((data) => {
-                    if (!data.writeups || data.writeups.length === 0) {
-                        return;
-                    }
-                    const ctfContainer = document.getElementById("hacker-labs-write-ups");
-                    data.writeups.forEach((ctf) => {
-                        const writeUpCard = document.createElement("article");
-                        writeUpCard.classList.add("ctf-writeup-card");
-                        writeUpCard.innerHTML = `
-                            <header class="grid">
-                            <div class="ctf-title">${ctf.title}</div>
-                            <div class="ctf-level ${ctf.level}"></div>
-                            </header>
-                            <footer class="ctf-write-up"><a href="${ctf.url}" target="_self">Ver write-up</a></footer> 
-                        `;
-                        writeUpCard.style.backgroundImage = `url(${ctf.img_url})`;
-                        ctfContainer.appendChild(writeUpCard);
-                    });
-                });
+    fetch(CONFIG_URL)
+        .then((response) => {
+            return response.json();
+        })
+        .then((response) => {
+            response.forEach((ctf) => {
+                const writeUp = {
+                    title: ctf.title,
+                    author: ctf.author,
+                    img_url: ctf.img_url,
+                    main_category: ctf.main_category,
+                    tags: ctf.tags,
+                    platform: ctf.platform,
+                    url: ctf.writeup_url,
+                };
+                ctfsAvailable.push(writeUp);
+            });
+
+            if (!ctfsAvailable || ctfsAvailable.length === 0) {
+                const writeUpCard = document.createElement('article');
+                writeUpCard.id = 'article';
+                writeUpCard.innerHTML = `
+                    <h3 class="no-ctf-title"></h3> 
+                `;
+                const ctfContainer = document.getElementById(
+                    `thl-${ctf.main_category}-write-ups`
+                );
+                ctfContainer.appendChild(writeUpCard);
+                return;
             }
+
+            ctfsAvailable.forEach((ctf) => {
+                const ctfContainer = document.getElementById(
+                    `thl-${ctf.main_category}-write-ups`
+                );
+                const writeUpCard = document.createElement('article');
+                writeUpCard.classList.add('ctf-writeup-card');
+                writeUpCard.innerHTML = `
+                    <header class="grid">
+                    <div class="ctf-title">${ctf.title}</div>
+                    <div class="ctf-level ${ctf.level}"></div>
+                    </header>
+                    <footer class="ctf-write-up"><a href="${ctf.url}" class="show-write-up-title" target="_self"></a></footer> 
+                `;
+                writeUpCard.style.backgroundImage = `url(${ctf.img_url})`;
+                ctfContainer.appendChild(writeUpCard);
+            });
         });
 }
+
+getCtfs();
