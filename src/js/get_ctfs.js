@@ -26,37 +26,47 @@ function getCtfs() {
                 };
                 ctfsAvailable.push(writeUp);
             });
+            const groupedCtfs = groupByCategory(ctfsAvailable, CTF_CATEGORIES);
 
-            if (!ctfsAvailable || ctfsAvailable.length === 0) {
-                const writeUpCard = document.createElement('article');
-                writeUpCard.id = 'article';
-                writeUpCard.innerHTML = `
-                    <h3 class="no-ctf-title"></h3> 
-                `;
+            Object.entries(groupedCtfs).forEach(([category, ctfList]) => {
                 const ctfContainer = document.getElementById(
-                    `thl-${ctf.main_category}-write-ups`
+                    `thl-${category}-write-ups`
                 );
-                ctfContainer.appendChild(writeUpCard);
-                return;
-            }
 
-            ctfsAvailable.forEach((ctf) => {
-                const ctfContainer = document.getElementById(
-                    `thl-${ctf.main_category}-write-ups`
-                );
-                const writeUpCard = document.createElement('article');
-                writeUpCard.classList.add('ctf-writeup-card');
-                writeUpCard.innerHTML = `
+                if (!ctfList.length) {
+                    const notFoundCTF = document.createElement('article');
+                    notFoundCTF.id = 'article';
+                    notFoundCTF.innerHTML = `<h3 class="no-ctf-title"></h3>`;
+                    ctfContainer.appendChild(notFoundCTF);
+                    return;
+                }
+                ctfList.forEach((ctf) => {
+                    const writeUpCard = document.createElement('article');
+                    writeUpCard.classList.add('ctf-writeup-card');
+                    writeUpCard.innerHTML = `
                     <header class="grid">
                     <div class="ctf-title">${ctf.title}</div>
                     <div class="ctf-level ${ctf.level}"></div>
                     </header>
                     <footer class="ctf-write-up"><a href="${ctf.url}" class="show-write-up-title" target="_self"></a></footer> 
                 `;
-                writeUpCard.style.backgroundImage = `url(${ctf.img_url})`;
-                ctfContainer.appendChild(writeUpCard);
+                    writeUpCard.style.backgroundImage = `url(${ctf.img_url})`;
+                    ctfContainer.appendChild(writeUpCard);
+                });
             });
         });
+}
+
+function groupByCategory(items, categories) {
+    const grouped = Object.fromEntries(categories.map((cat) => [cat, []]));
+
+    items.forEach((item) => {
+        if (categories.includes(item.main_category)) {
+            grouped[item.main_category].push(item);
+        }
+    });
+
+    return grouped;
 }
 
 getCtfs();

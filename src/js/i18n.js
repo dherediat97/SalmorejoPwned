@@ -32,11 +32,11 @@ function setStrings(translations) {
     const reversingTitle = document.querySelectorAll('.reversing-title');
     const forenseTitle = document.querySelectorAll('.forensics-title');
     const iahackingTitle = document.querySelectorAll('.ia-hacking-title');
+    const osintTitle = document.querySelectorAll('.osint-title');
 
     //CTF Titles
     const levelTitle = document.querySelectorAll('.level-title');
     const categoriesTitle = document.querySelectorAll('.categories-title');
-    const creatorTitle = document.querySelector('.creator-title');
     const easyTitle = document.querySelectorAll('.easy-title');
     const mediumTitle = document.querySelectorAll('.medium-title');
     const hardTitle = document.querySelectorAll('.hard-title');
@@ -48,7 +48,6 @@ function setStrings(translations) {
     const byTitle = document.querySelectorAll('.by-title');
 
     const festiveTitle = document.querySelectorAll('.festive-title');
-    console.log(showWriteUpTitle);
 
     setData(translations.defensive, defensiveTitle);
     setData(translations.offensive, offensiveTitle);
@@ -56,6 +55,7 @@ function setStrings(translations) {
     setData(translations.reversing, reversingTitle);
     setData(translations.forensics, forenseTitle);
     setData(translations.ia_hacking, iahackingTitle);
+    setData(translations.osint, osintTitle);
 
     setData(translations.level, levelTitle);
     setData(translations.categories, categoriesTitle);
@@ -63,7 +63,7 @@ function setStrings(translations) {
     setData(translations.medium, mediumTitle);
     setData(translations.hard, hardTitle);
     setData(translations.show_write_up, showWriteUpTitle);
-    setData(translations.no_ctf, noCtfTitle);
+    setData(translations.no_ctf_title, noCtfTitle);
 
     setData(translations.made_with, madeWithTitle);
     setData(translations.by, byTitle);
@@ -74,7 +74,7 @@ function setStrings(translations) {
 //Initial language load
 setTimeout(() => {
     changeLanguage(currentLanguage);
-}, 1);
+}, 100);
 
 //Change language on select change
 const selectLanguage = document.getElementById('selectLanguage');
