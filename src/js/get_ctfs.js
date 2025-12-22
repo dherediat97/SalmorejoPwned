@@ -4,7 +4,7 @@ openCtfDetails(typeCtf);
 function openCtfDetails(ctfType) {
     if (!ctfType) return;
 
-    const ctfDetails = document.getElementById(`${ctfType}-ctfs`);
+    const ctfDetails = document.getElementById(`thl-${ctfType}`);
     ctfDetails.open = true;
 }
 

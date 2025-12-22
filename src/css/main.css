@@ -6,17 +6,107 @@
     --pico-font-family: Cascadia Code;
   }
 
+  * {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .website-title {
+    color: #4CAF50;
+    font-size: 1.2rem;
+  }
+
   .festive-title {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    color: #b3000c;
+    width: 100%;
+  }
+
+  .blink {
+    font-weight: 600;
+    font-size: 30px;
+    color: #ffffff;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+  }
+
+  @keyframes blink {
+
+    from,
+    to {
+      color: transparent;
+    }
+
+    50% {
+      color: black;
+    }
+  }
+
+  @-moz-keyframes blink {
+
+    from,
+    to {
+      color: transparent;
+    }
+
+    50% {
+      color: black;
+    }
+  }
+
+  @-webkit-keyframes blink {
+
+    from,
+    to {
+      color: transparent;
+    }
+
+    50% {
+      color: black;
+    }
+  }
+
+  @-ms-keyframes blink {
+
+    from,
+    to {
+      color: transparent;
+    }
+
+    50% {
+      color: black;
+    }
+  }
+
+  @-o-keyframes blink {
+
+    from,
+    to {
+      color: transparent;
+    }
+
+    50% {
+      color: black;
+    }
   }
 
   #intro {
     margin: 0 auto;
-    width: 400px;
+    width: 30%;
   }
 
+  .intro-container {
+    margin-bottom: 5rem;
+  }
+
+  .defensive-ctfs {
+    margin-top: 5rem;
+  }
 
   .no-ctf-title {
     margin-bottom: 0px;
@@ -89,4 +179,21 @@
     background-color: #F44336;
     padding: 0.5rem;
     border-radius: var(--pico-border-radius);
+  }
+
+  .blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  }
+
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
   }

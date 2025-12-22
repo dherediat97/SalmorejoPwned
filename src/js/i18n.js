@@ -72,9 +72,7 @@ function setStrings(translations) {
 }
 
 //Initial language load
-setTimeout(() => {
-    changeLanguage(currentLanguage);
-}, 100);
+changeLanguage(currentLanguage);
 
 //Change language on select change
 const selectLanguage = document.getElementById('selectLanguage');
