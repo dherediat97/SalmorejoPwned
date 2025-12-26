@@ -1,5 +1,6 @@
 [
     {
+        "id": 117,
         "title": "Sedition",
         "author": "El Pingüino de Mario",
         "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/sedition.jpg",
@@ -13,6 +14,7 @@
         ]
     },
     {
+        "id": 64,
         "title": "Papaya",
         "author": "condor & CuriosidadesDeHackers",
         "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/papaya.png",
@@ -26,6 +28,7 @@
         ]
     },
     {
+        "id": 111,
         "title": "WatchStore",
         "author": "condor & CuriosidadesDeHackers",
         "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/wachtsote.png",
@@ -39,6 +42,7 @@
         ]
     },
     {
+        "id": 73,
         "title": "Quokka",
         "author": "Oscar",
         "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/quokka.png",
@@ -52,6 +56,7 @@
         ]
     },
     {
+        "id": 105,
         "title": "El Amigo",
         "author": "Oscar",
         "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/amigo.png",

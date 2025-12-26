@@ -6,6 +6,7 @@ function getCtfs() {
         .then((response) => {
             response.forEach((ctf) => {
                 const writeUp = {
+                    id: ctf.id,
                     title: ctf.title,
                     author: ctf.author,
                     img_url: ctf.img_url,
@@ -13,7 +14,8 @@ function getCtfs() {
                     level: ctf.level,
                     tags: ctf.tags,
                     platform: ctf.platform,
-                    url: ctf.writeup_url,
+                    url: '',
+                    writeUpUrl: ctf.writeup_url,
                 };
                 ctfsAvailable.push(writeUp);
             });
@@ -32,6 +34,9 @@ function getCtfs() {
                     return;
                 }
                 ctfList.forEach((ctf) => {
+                    if (ctf.platform === THL_PLATFORM) {
+                        ctf.url = `${THL_CTF_PAGE}${ctf.id}`;
+                    }
                     const writeUpCard = document.createElement('div');
                     writeUpCard.classList.add('ctf-writeup-card');
                     writeUpCard.innerHTML = `
@@ -39,7 +44,9 @@ function getCtfs() {
                         ctf.img_url
                     }" alt="CTF Image"/>
                     <div class="ctf-details">
-                    <div class="ctf-title">${ctf.title}</div>
+                    <div class="ctf-title"><a href="${THL_CTF_PAGE}${
+                        ctf.id
+                    }" target="_blank">${ctf.title}</a></div>
                     <div class="ctf-level">Dificultad: <span class="ctf-level-${
                         ctf.level
                     }">${ctf.level}</span></div>
@@ -55,7 +62,7 @@ function getCtfs() {
                         ctf.author
                     )}" target="_blank">${ctf.author}</a></div>
                     <div class="ctf-write-up"><a href="${
-                        ctf.url
+                        ctf.writeUpUrl
                     }" class="show-write-up-title" target="_self"></a></div> 
                     </div>
                 `;
@@ -66,22 +73,11 @@ function getCtfs() {
 }
 
 function getPlatformName(platformUrl) {
-    const platformNames = {
-        'https://www.hackthebox.com/': 'Hack The Box',
-        'https://www.tryhackme.com/': 'TryHackMe',
-        'https://www.cyberdefenders.org/': 'CyberDefenders',
-        'https://labs.thehackerslabs.com/': 'TheHackerLabs',
-    };
-    return platformNames[platformUrl];
+    return PLATFORM_NAMES[platformUrl];
 }
 
 function getAuthorBlogUrl(authorName) {
-    const authorBlogUrls = {
-        Oscar: 'https://oscarai.tech/',
-        'condor & CuriosidadesDeHackers': 'https://curiosidadesdehackers.com/',
-        'El Pingüino de Mario': 'https://maalfer.github.io/whoami/',
-    };
-    return authorBlogUrls[authorName] || '#';
+    return AUTHOR_BLOGS[authorName] || '#';
 }
 
 function groupByCategory(items, categories) {
