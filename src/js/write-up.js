@@ -1,16 +1,23 @@
 const writeUpParams = document.location.hash.substring(1).split('#');
 const ctfNameElement = document.querySelector('.ctfName');
 
-ctfNameElement.textContent =
-    writeUpParams[0].charAt(0).toUpperCase() + writeUpParams[0].slice(1);
+const writeUpTitle = encodeURIComponent(writeUpParams[0]);
+const writeUpCategory = encodeURIComponent(writeUpParams[1]);
+ctfNameElement.textContent = decodeURIComponent(
+    writeUpTitle.charAt(0).toUpperCase() + writeUpTitle.slice(1)
+);
 
+const ctfCategoryElement = document.querySelector('.category-title');
+ctfCategoryElement.textContent =
+    writeUpCategory.charAt(0).toUpperCase() + writeUpCategory.slice(1);
 const writeUpDiv = document.getElementById('writeUp');
+const categoryNavElement = document.querySelector('.category');
 
+const categoryClass = writeUpCategory.toLowerCase();
 const player = AsciinemaPlayer.create(
     `assets/${writeUpParams[0]}.cast`,
     writeUpDiv,
     {
-        speed: 3,
         audioUrl:
             writeUpParams[1] == 'music' ? `assets/music/track1.mp3` : null,
         idleTimeLimit: 10,

@@ -37,9 +37,11 @@ function setStrings(translations) {
     //CTF Titles
     const levelTitle = document.querySelectorAll('.level-title');
     const categoriesTitle = document.querySelectorAll('.categories-title');
-    const easyTitle = document.querySelectorAll('.easy-title');
-    const mediumTitle = document.querySelectorAll('.medium-title');
-    const hardTitle = document.querySelectorAll('.hard-title');
+    const easyTitle = document.querySelectorAll('.ctf-level-easy');
+    const advancedTitle = document.querySelectorAll('.ctf-level-advanced');
+    const professionalTitle = document.querySelectorAll(
+        '.ctf-level-professional'
+    );
 
     const showWriteUpTitle = document.querySelectorAll('.show-write-up-title');
     const noCtfTitle = document.querySelectorAll('.no-ctf-title');
@@ -60,8 +62,8 @@ function setStrings(translations) {
     setData(translations.level, levelTitle);
     setData(translations.categories, categoriesTitle);
     setData(translations.easy, easyTitle);
-    setData(translations.medium, mediumTitle);
-    setData(translations.hard, hardTitle);
+    setData(translations.advanced, advancedTitle);
+    setData(translations.professional, professionalTitle);
     setData(translations.show_write_up, showWriteUpTitle);
     setData(translations.no_ctf_title, noCtfTitle);
 

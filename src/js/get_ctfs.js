@@ -1,10 +1,11 @@
-const typeCtf = document.location.hash.substring(1).split('#')[1];
+const typeCtf = document.location.hash.substring(0).split('#')[1];
 openCtfDetails(typeCtf);
 
 function openCtfDetails(ctfType) {
+    console.log(ctfType);
     if (!ctfType) return;
 
-    const ctfDetails = document.getElementById(`thl-${ctfType}`);
+    const ctfDetails = document.getElementById(ctfType);
     ctfDetails.open = true;
 }
 
@@ -20,6 +21,7 @@ function getCtfs() {
                     author: ctf.author,
                     img_url: ctf.img_url,
                     main_category: ctf.main_category,
+                    level: ctf.level,
                     tags: ctf.tags,
                     platform: ctf.platform,
                     url: ctf.writeup_url,
@@ -30,7 +32,7 @@ function getCtfs() {
 
             Object.entries(groupedCtfs).forEach(([category, ctfList]) => {
                 const ctfContainer = document.getElementById(
-                    `thl-${category}-write-ups`
+                    `${category}-write-ups`
                 );
 
                 if (!ctfList.length) {
@@ -41,16 +43,19 @@ function getCtfs() {
                     return;
                 }
                 ctfList.forEach((ctf) => {
-                    const writeUpCard = document.createElement('article');
+                    const writeUpCard = document.createElement('div');
                     writeUpCard.classList.add('ctf-writeup-card');
                     writeUpCard.innerHTML = `
-                    <header class="grid">
+                    <img class="ctf-writeup-img" src="${ctf.img_url}" alt="CTF Image"/>
+                    <div class="ctf-details">
                     <div class="ctf-title">${ctf.title}</div>
-                    <div class="ctf-level ${ctf.level}"></div>
-                    </header>
-                    <footer class="ctf-write-up"><a href="${ctf.url}" class="show-write-up-title" target="_self"></a></footer> 
+                    <div class="ctf-level">Dificultad: <span class="ctf-level-${ctf.level}">${ctf.level}</span></div>
+                    <div class="ctf-category">Categorías: ${ctf.main_category}, ${ctf.tags}</div>
+                    <div class="ctf-platform">Plataforma: <a href="${ctf.platform}" target="_blank">${ctf.platform}</a></div>
+                    <div class="ctf-author">Autor: ${ctf.author}</div>
+                    <div class="ctf-write-up"><a href="${ctf.url}" class="show-write-up-title" target="_self"></a></div> 
+                    </div>
                 `;
-                    writeUpCard.style.backgroundImage = `url(${ctf.img_url})`;
                     ctfContainer.appendChild(writeUpCard);
                 });
             });
