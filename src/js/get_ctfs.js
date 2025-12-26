@@ -1,14 +1,3 @@
-const typeCtf = document.location.hash.substring(0).split('#')[1];
-openCtfDetails(typeCtf);
-
-function openCtfDetails(ctfType) {
-    console.log(ctfType);
-    if (!ctfType) return;
-
-    const ctfDetails = document.getElementById(ctfType);
-    ctfDetails.open = true;
-}
-
 function getCtfs() {
     fetch(CONFIG_URL)
         .then((response) => {
