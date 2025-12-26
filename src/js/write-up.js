@@ -16,8 +16,8 @@ const player = AsciinemaPlayer.create(
         audioUrl:
             writeUpParams[1] == 'music' ? `assets/music/track1.mp3` : null,
         idleTimeLimit: 10,
-        cols: 140,
-        rows: 24,
+        cols: 220,
+        rows: 40,
         autoPlay: true,
     }
 );
