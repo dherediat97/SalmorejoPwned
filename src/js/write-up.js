@@ -1,21 +1,16 @@
-const writeUpParams = document.location.hash.substring(1).split('#');
+const writeUpParams = document.location.hash.split('#');
 const ctfNameElement = document.querySelector('.ctfName');
+const ctfName =
+    writeUpParams[1].replace(/_/g, ' ').charAt(0).toUpperCase() +
+    writeUpParams[1].replace(/_/g, ' ').slice(1);
 
-const writeUpTitle = encodeURIComponent(writeUpParams[0]);
-const writeUpCategory = encodeURIComponent(writeUpParams[1]);
-ctfNameElement.textContent = decodeURIComponent(
-    writeUpTitle.charAt(0).toUpperCase() + writeUpTitle.slice(1)
-);
+ctfNameElement.textContent = ctfName.charAt(0).toUpperCase() + ctfName.slice(1);
 
-const ctfCategoryElement = document.querySelector('.category-title');
-ctfCategoryElement.textContent =
-    writeUpCategory.charAt(0).toUpperCase() + writeUpCategory.slice(1);
 const writeUpDiv = document.getElementById('writeUp');
 const categoryNavElement = document.querySelector('.category');
 
-const categoryClass = writeUpCategory.toLowerCase();
 const player = AsciinemaPlayer.create(
-    `assets/${writeUpParams[0]}.cast`,
+    `assets/${writeUpParams[1]}.cast`,
     writeUpDiv,
     {
         audioUrl:
