@@ -3,7 +3,9 @@
     --pico-typography-spacing-vertical: 1.5rem;
     --pico-form-element-spacing-vertical: 1rem;
     --pico-form-element-spacing-horizontal: 1.25rem;
-    --pico-font-family: Cascadia Code;
+    --pico-font-family: "Cascadia Code", sans-serif;
+    font-family: "Cascadia Code", sans-serif;
+    font-optical-sizing: auto;
     --pico-color-primary: #4CAF50;
   }
 
@@ -14,7 +16,8 @@
 
   .website-title {
     color: #4CAF50;
-    font-size: 1.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
   }
 
   .festive-title {
@@ -98,7 +101,7 @@
 
   #intro {
     margin: 0 auto;
-    width: 80%;
+    width: 65%;
   }
 
   .intro-container {
