@@ -9,6 +9,7 @@ if (
 
 const CONFIG_URL = 'src/json/config.json';
 const I18N_URL = APP_DEVELOPMENT ? '/src/i18n/languages' : 'src/i18n/languages';
+const INTRO_CAST = 'src/assets/intro.cast';
 const ctfsAvailable = [];
 const MUSIC_URL = 'src/json/music.json';
 const CTF_CATEGORIES = [
