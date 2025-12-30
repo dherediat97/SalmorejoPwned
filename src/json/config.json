@@ -11,7 +11,8 @@
         "tags": [
             "web",
             "linux"
-        ]
+        ],
+        "done": true
     },
     {
         "id": 64,
@@ -25,7 +26,8 @@
         "tags": [
             "web",
             "linux"
-        ]
+        ],
+        "done": false
     },
     {
         "id": 111,
@@ -34,12 +36,13 @@
         "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/wachtsote.png",
         "writeup_url": "src/write-up.html#watchstore",
         "level": "easy",
-        "platform": "https://labs.thehackerslabs.com/",
+        "platform": "https://thehackerslabs.com/",
         "main_category": "offensive",
         "tags": [
             "web",
             "linux"
-        ]
+        ],
+        "done": true
     },
     {
         "id": 73,
@@ -48,12 +51,13 @@
         "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/quokka.png",
         "writeup_url": "src/write-up.html#quokka",
         "level": "easy",
-        "platform": "https://labs.thehackerslabs.com/",
+        "platform": "https://thehackerslabs.com/",
         "main_category": "offensive",
         "tags": [
             "smb",
             "windows"
-        ]
+        ],
+        "done": true
     },
     {
         "id": 105,
@@ -62,12 +66,13 @@
         "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/amigo.png",
         "writeup_url": "src/write-up.html#el_amigo",
         "level": "advanced",
-        "platform": "https://labs.thehackerslabs.com/",
+        "platform": "https://thehackerslabs.com/",
         "main_category": "defensive",
         "tags": [
             "web",
             "linux"
-        ]
+        ],
+        "done": true
     },
     {
         "id": 160,
@@ -76,14 +81,15 @@
         "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/Horizon.png",
         "writeup_url": "src/write-up.html#horizon",
         "level": "advanced",
-        "platform": "https://labs.thehackerslabs.com/",
+        "platform": "https://thehackerslabs.com/",
         "main_category": "offensive",
         "tags": [
             "osint",
             "forensics",
             "web",
             "linux"
-        ]
+        ],
+        "done": false
     },
     {
         "id": 89,
@@ -92,12 +98,13 @@
         "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/ticktackroot.png",
         "writeup_url": "src/write-up.html#ticktackroot",
         "level": "easy",
-        "platform": "https://labs.thehackerslabs.com/",
+        "platform": "https://thehackerslabs.com/",
         "main_category": "offensive",
         "tags": [
             "web",
             "linux"
-        ]
+        ],
+        "done": false
     },
     {
         "id": 74,
@@ -106,12 +113,13 @@
         "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/rebind.png",
         "writeup_url": "src/write-up.html#rebind",
         "level": "advanced",
-        "platform": "https://labs.thehackerslabs.com/",
+        "platform": "https://thehackerslabs.com/",
         "main_category": "offensive",
         "tags": [
             "web",
             "linux"
-        ]
+        ],
+        "done": false
     },
     {
         "id": 68,
@@ -120,11 +128,12 @@
         "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/pinbreaker.png",
         "writeup_url": "src/write-up.html#pin_breaker",
         "level": "easy",
-        "platform": "https://labs.thehackerslabs.com/",
+        "platform": "https://thehackerslabs.com/",
         "main_category": "reversing",
         "tags": [
             "android"
-        ]
+        ],
+        "done": false
     },
     {
         "id": 3,
@@ -133,12 +142,13 @@
         "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/aceituno.png",
         "writeup_url": "src/write-up.html#aceituno",
         "level": "advanced",
-        "platform": "https://labs.thehackerslabs.com/",
+        "platform": "https://thehackerslabs.com/",
         "main_category": "offensive",
         "tags": [
             "web",
             "linux"
-        ]
+        ],
+        "done": false
     },
     {
         "id": 103,
@@ -146,13 +156,14 @@
         "author": "murrusko",
         "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/aceituna.png",
         "writeup_url": "src/write-up.html#aceituna_brava",
-        "level": "advanced",
-        "platform": "https://labs.thehackerslabs.com/",
+        "level": "expert",
+        "platform": "https://thehackerslabs.com/",
         "main_category": "reversing",
         "tags": [
             "web",
             "linux"
-        ]
+        ],
+        "done": false
     },
     {
         "id": 108,
@@ -161,12 +172,13 @@
         "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/jaen.png",
         "writeup_url": "src/write-up.html#artedejaen",
         "level": "easy",
-        "platform": "https://labs.thehackerslabs.com/",
+        "platform": "https://thehackerslabs.com/",
         "main_category": "osint",
         "tags": [
             "web",
             "linux"
-        ]
+        ],
+        "done": false
     },
     {
         "id": 147,
@@ -175,11 +187,60 @@
         "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/despromptado.png",
         "writeup_url": "src/write-up.html#despromptado",
         "level": "easy",
-        "platform": "https://labs.thehackerslabs.com/",
+        "platform": "https://thehackerslabs.com/",
         "main_category": "ia-hacking",
         "tags": [
             "web",
             "linux"
-        ]
+        ],
+        "done": false
+    },
+    {
+        "id": 22,
+        "title": "CryptoLabyrinth",
+        "author": "Oscar",
+        "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/cryptolabyrinth.png",
+        "writeup_url": "src/write-up.html#cryptolabyrinth",
+        "level": "easy",
+        "platform": "https://thehackerslabs.com/",
+        "main_category": "cryptography",
+        "tags": [
+            "web",
+            "offensive",
+            "linux"
+        ],
+        "done": false
+    },
+    {
+        "id": 57,
+        "title": "Mobile Phone",
+        "author": "Oscar",
+        "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/mobile_phone.png",
+        "writeup_url": "src/write-up.html#mobile_phone",
+        "level": "easy",
+        "platform": "https://thehackerslabs.com/",
+        "main_category": "android",
+        "tags": [
+            "reversing",
+            "forensics",
+            "linux"
+        ],
+        "done": false
+    },
+    {
+        "id": 158,
+        "title": "IceID",
+        "author": "MeTaN01a",
+        "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/IcedID_Titanes1024x1024cuidad.png",
+        "writeup_url": "src/write-up.html#iceid",
+        "level": "advanced",
+        "platform": "https://thehackerslabs.com/",
+        "main_category": "forensics",
+        "tags": [
+            "malware analysis",
+            "linux",
+            "wireshark"
+        ],
+        "done": false
     }
 ]

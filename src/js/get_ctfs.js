@@ -14,8 +14,8 @@ function getCtfs() {
                     level: ctf.level,
                     tags: ctf.tags,
                     platform: ctf.platform,
-                    url: '',
                     writeUpUrl: ctf.writeup_url,
+                    done: ctf.done,
                 };
                 ctfsAvailable.push(writeUp);
             });
@@ -39,6 +39,9 @@ function getCtfs() {
                     }
                     const writeUpCard = document.createElement('div');
                     writeUpCard.classList.add('ctf-writeup-card');
+                    writeUpCard.classList.add(
+                        !ctf.done ? 'pendingWriteUp' : 'writeUpDone'
+                    );
                     writeUpCard.innerHTML = `
                     <img class="ctf-writeup-img" src="${
                         ctf.img_url

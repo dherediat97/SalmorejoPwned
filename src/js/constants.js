@@ -34,6 +34,9 @@ const PLATFORM_NAMES = {
 const AUTHOR_BLOGS = {
     'El Pingüino de Mario': 'https://maalfer.github.io/whoami/',
     Oscar: 'https://oscarai.tech/',
+    murrusko: '',
+    MeTaN01a: '',
+    lenam: 'https://len4m.github.io/',
     'condor & CuriosidadesDeHackers': 'https://curiosidadesdehackers.com/about',
 };
 

@@ -39,6 +39,7 @@ function setStrings(translations) {
     const categoriesTitle = document.querySelectorAll('.categories-title');
     const easyTitle = document.querySelectorAll('.ctf-level-easy');
     const advancedTitle = document.querySelectorAll('.ctf-level-advanced');
+    const expertTitle = document.querySelectorAll('.ctf-level-expert');
     const professionalTitle = document.querySelectorAll(
         '.ctf-level-professional'
     );
@@ -63,6 +64,7 @@ function setStrings(translations) {
     setData(translations.categories, categoriesTitle);
     setData(translations.easy, easyTitle);
     setData(translations.advanced, advancedTitle);
+    setData(translations.expert, expertTitle);
     setData(translations.professional, professionalTitle);
     setData(translations.show_write_up, showWriteUpTitle);
     setData(translations.no_ctf_title, noCtfTitle);
