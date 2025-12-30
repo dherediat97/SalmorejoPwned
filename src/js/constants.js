@@ -22,19 +22,19 @@ const CTF_CATEGORIES = [
     'osint',
 ];
 
-const THL_PLATFORM = 'https://labs.thehackerslabs.com/';
+const THL_PLATFORM = 'https://thehackerslabs.com/';
 
 const PLATFORM_NAMES = {
     'https://www.hackthebox.com/': 'Hack The Box',
     'https://www.tryhackme.com/': 'TryHackMe',
     'https://www.cyberdefenders.org/': 'CyberDefenders',
-    'https://labs.thehackerslabs.com/': 'TheHackerLabs',
+    'https://thehackerslabs.com/': 'TheHackerLabs',
 };
 
 const AUTHOR_BLOGS = {
     'El Pingüino de Mario': 'https://maalfer.github.io/whoami/',
     Oscar: 'https://oscarai.tech/',
-    'condor & CuriosidadesDeHackers': 'https://curiosidadesdehackers.com/',
+    'condor & CuriosidadesDeHackers': 'https://curiosidadesdehackers.com/about',
 };
 
 const THL_CTF_PAGE = 'https://labs.thehackerslabs.com/machine/';
