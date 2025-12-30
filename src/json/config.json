@@ -68,5 +68,118 @@
             "web",
             "linux"
         ]
+    },
+    {
+        "id": 160,
+        "title": "Horizon",
+        "author": "dherediat",
+        "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/Horizon.png",
+        "writeup_url": "src/write-up.html#horizon",
+        "level": "advanced",
+        "platform": "https://labs.thehackerslabs.com/",
+        "main_category": "offensive",
+        "tags": [
+            "osint",
+            "forensics",
+            "web",
+            "linux"
+        ]
+    },
+    {
+        "id": 89,
+        "title": "TickTackRoot",
+        "author": "Oscar",
+        "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/ticktackroot.png",
+        "writeup_url": "src/write-up.html#ticktackroot",
+        "level": "easy",
+        "platform": "https://labs.thehackerslabs.com/",
+        "main_category": "offensive",
+        "tags": [
+            "web",
+            "linux"
+        ]
+    },
+    {
+        "id": 74,
+        "title": "Rebind",
+        "author": "Oscar",
+        "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/rebind.png",
+        "writeup_url": "src/write-up.html#rebind",
+        "level": "advanced",
+        "platform": "https://labs.thehackerslabs.com/",
+        "main_category": "offensive",
+        "tags": [
+            "web",
+            "linux"
+        ]
+    },
+    {
+        "id": 68,
+        "title": "Pin Breaker",
+        "author": "Oscar",
+        "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/pinbreaker.png",
+        "writeup_url": "src/write-up.html#pin_breaker",
+        "level": "easy",
+        "platform": "https://labs.thehackerslabs.com/",
+        "main_category": "reversing",
+        "tags": [
+            "android"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Aceituno",
+        "author": "condor & CuriosidadesDeHackers",
+        "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/aceituno.png",
+        "writeup_url": "src/write-up.html#aceituno",
+        "level": "advanced",
+        "platform": "https://labs.thehackerslabs.com/",
+        "main_category": "offensive",
+        "tags": [
+            "web",
+            "linux"
+        ]
+    },
+    {
+        "id": 103,
+        "title": "Aceituna Brava",
+        "author": "murrusko",
+        "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/aceituna.png",
+        "writeup_url": "src/write-up.html#aceituna_brava",
+        "level": "advanced",
+        "platform": "https://labs.thehackerslabs.com/",
+        "main_category": "reversing",
+        "tags": [
+            "web",
+            "linux"
+        ]
+    },
+    {
+        "id": 108,
+        "title": "Arte de Jaén",
+        "author": "condor & CuriosidadesDeHackers",
+        "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/jaen.png",
+        "writeup_url": "src/write-up.html#artedejaen",
+        "level": "easy",
+        "platform": "https://labs.thehackerslabs.com/",
+        "main_category": "osint",
+        "tags": [
+            "web",
+            "linux"
+        ]
+    },
+    {
+        "id": 147,
+        "title": "Despromptado",
+        "author": "Lenam",
+        "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/despromptado.png",
+        "writeup_url": "src/write-up.html#despromptado",
+        "level": "easy",
+        "platform": "https://labs.thehackerslabs.com/",
+        "main_category": "ia-hacking",
+        "tags": [
+            "web",
+            "linux"
+        ]
     }
 ]
