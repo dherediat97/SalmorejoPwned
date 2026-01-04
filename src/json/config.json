@@ -5,7 +5,7 @@
         "author": "El Pingüino de Mario",
         "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/sedition.jpg",
         "writeup_url": "src/write-up.html#sedition",
-        "platform": "https://labs.thehackerslabs.com/",
+        "platform": "https://thehackerslabs.com/",
         "level": "easy",
         "main_category": "offensive",
         "tags": [
@@ -21,7 +21,7 @@
         "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/papaya.png",
         "writeup_url": "src/write-up.html#papaya",
         "level": "easy",
-        "platform": "https://labs.thehackerslabs.com/",
+        "platform": "https://thehackerslabs.com/",
         "main_category": "offensive",
         "tags": [
             "web",
