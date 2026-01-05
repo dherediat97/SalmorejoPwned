@@ -64,15 +64,23 @@ function getCtfs() {
                     <div class="ctf-author">Autor: <a href="${getAuthorBlogUrl(
                         ctf.author
                     )}" target="_blank">${ctf.author}</a></div>
-                    <div class="ctf-write-up"><a href="${
-                        ctf.writeUpUrl
-                    }" class="show-write-up-title" target="_self"></a></div> 
+                    ${ctf.done ? showWriteUpButton(ctf) : `<div></div>`}
                     </div>
                 `;
                     ctfContainer.appendChild(writeUpCard);
                 });
             });
         });
+}
+
+function showWriteUpButton(ctf) {
+    return `<div class="ctf-write-up">
+        <a
+            href="${ctf.writeUpUrl}"
+            class="show-write-up-title"
+            target="_self"
+        ></a>
+    </div>`;
 }
 
 function getPlatformName(platformUrl) {

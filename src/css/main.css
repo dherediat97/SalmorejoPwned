@@ -117,8 +117,6 @@
     text-align: center;
   }
 
-
-
   .ctf-writeup-img {
     flex: 0.3;
     object-fit: cover;
@@ -134,10 +132,6 @@
     height: 10rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
-  }
-
-  .ctf-writeup-card.pendingWriteUp {
-    opacity: 0.6;
   }
 
   .ctf-writeup-card:hover {

@@ -242,5 +242,21 @@
             "wireshark"
         ],
         "done": false
+    },
+    {
+        "id": 162,
+        "title": "Cold Fear",
+        "author": "MeTaN01a",
+        "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/Cold%20Fear.png",
+        "writeup_url": "src/write-up.html#cold_fear",
+        "level": "advanced",
+        "platform": "https://thehackerslabs.com/",
+        "main_category": "offensive",
+        "tags": [
+            "web",
+            "forensics",
+            "steneography"
+        ],
+        "done": false
     }
 ]
