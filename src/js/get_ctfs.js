@@ -1,5 +1,5 @@
 function getCtfs() {
-    fetch(CONFIG_URL)
+    fetch('src/' + CONFIG_URL)
         .then((response) => {
             return response.json();
         })
