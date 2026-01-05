@@ -55,7 +55,7 @@ if (isFestiveDate(new Date())) {
     </ul>`;
 
     const introDiv = document.getElementById('intro');
-    if (introDiv !== undefined) {
+    if (introDiv !== null) {
         var randomNumber = Math.round(Math.random() * 3);
         if (randomNumber == 0) {
             randomNumber = 1;
