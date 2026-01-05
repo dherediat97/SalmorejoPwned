@@ -61,7 +61,7 @@ if (isFestiveDate(new Date())) {
     }
     AsciinemaPlayer.create(FESTIVE_INTRO + randomNumber + '.cast', introDiv, {
         controls: false,
-        idleTimeLimit: 4,
+        idleTimeLimit: 2,
         autoPlay: true,
         loop: true,
     });

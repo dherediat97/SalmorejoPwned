@@ -8,14 +8,12 @@ ctfNameElement.textContent = ctfName.charAt(0).toUpperCase() + ctfName.slice(1);
 
 const writeUpDiv = document.getElementById('writeUp');
 const categoryNavElement = document.querySelector('.category');
-
-const player = AsciinemaPlayer.create(
+AsciinemaPlayer.create(
     `assets/write-ups/${writeUpParams[1]}.cast`,
     writeUpDiv,
     {
-        idleTimeLimit: 10,
-        cols: 220,
-        rows: 40,
+        idleTimeLimit: 2,
+        controls: true,
         autoPlay: true,
     }
 );
