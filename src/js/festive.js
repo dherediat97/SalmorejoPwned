@@ -55,10 +55,13 @@ if (isFestiveDate(new Date())) {
     </ul>`;
 
     const introDiv = document.getElementById('intro');
-
-    AsciinemaPlayer.create(FESTIVE_INTRO, introDiv, {
-        rows: 24,
+    var randomNumber = Math.round(Math.random() * 3);
+    if (randomNumber == 0) {
+        randomNumber = 1;
+    }
+    AsciinemaPlayer.create(FESTIVE_INTRO + randomNumber + '.cast', introDiv, {
         controls: false,
+        idleTimeLimit: 4,
         autoPlay: true,
         loop: true,
     });
