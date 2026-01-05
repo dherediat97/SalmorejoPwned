@@ -55,14 +55,20 @@ if (isFestiveDate(new Date())) {
     </ul>`;
 
     const introDiv = document.getElementById('intro');
-    var randomNumber = Math.round(Math.random() * 3);
-    if (randomNumber == 0) {
-        randomNumber = 1;
+    if (introDiv !== undefined) {
+        var randomNumber = Math.round(Math.random() * 3);
+        if (randomNumber == 0) {
+            randomNumber = 1;
+        }
+        AsciinemaPlayer.create(
+            FESTIVE_INTRO + randomNumber + '.cast',
+            introDiv,
+            {
+                controls: false,
+                idleTimeLimit: 2,
+                autoPlay: true,
+                loop: true,
+            }
+        );
     }
-    AsciinemaPlayer.create(FESTIVE_INTRO + randomNumber + '.cast', introDiv, {
-        controls: false,
-        idleTimeLimit: 2,
-        autoPlay: true,
-        loop: true,
-    });
 }
