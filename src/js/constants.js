@@ -7,7 +7,12 @@ if (
     var APP_DEVELOPMENT = false;
 }
 
-const CONFIG_URL = 'json/config.json';
+const CONFIG_URL_WRITE_UP = APP_DEVELOPMENT
+    ? '/src/json/config.json'
+    : 'json/config.json';
+const CONFIG_URL = APP_DEVELOPMENT
+    ? '/src/json/config.json'
+    : 'src/json/config.json';
 const I18N_URL = APP_DEVELOPMENT ? '/src/i18n/languages' : 'src/i18n/languages';
 const FESTIVE_INTRO = 'src/assets/special/festive_intro_';
 const COMMON_INTRO = 'src/assets/intro.cast';

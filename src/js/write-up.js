@@ -20,7 +20,7 @@ AsciinemaPlayer.create(
 
 const bibliography = document.querySelector('.bibliography-links');
 
-fetch(CONFIG_URL)
+fetch(CONFIG_URL_WRITE_UP)
     .then((response) => {
         return response.json();
     })
