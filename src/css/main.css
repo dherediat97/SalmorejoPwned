@@ -206,6 +206,10 @@
     border-radius: var(--pico-border-radius);
   }
 
+  .bibliography {
+    margin-top: 2em;
+  }
+
   .blink {
     animation: blink-animation 1s steps(5, start) infinite;
     -webkit-animation: blink-animation 1s steps(5, start) infinite;

@@ -15,6 +15,7 @@ function getCtfs() {
                     tags: ctf.tags,
                     platform: ctf.platform,
                     writeUpUrl: ctf.writeup_url,
+                    bibliography_links: ctf.bibliography_links,
                     done: ctf.done,
                 };
                 ctfsAvailable.push(writeUp);

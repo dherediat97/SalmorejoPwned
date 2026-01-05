@@ -17,3 +17,19 @@ AsciinemaPlayer.create(
         autoPlay: true,
     }
 );
+
+const bibliography = document.querySelector('.bibliography-links');
+
+fetch(CONFIG_URL)
+    .then((response) => {
+        return response.json();
+    })
+    .then((ctfList) => {
+        const ctf = ctfList.filter((ctfFound) =>
+            ctfFound.writeup_url.includes(writeUpParams[1])
+        )[0];
+        for (let i = 0; i < ctf.bibliography_links.length; i++) {
+            const link = ctf.bibliography_links[i];
+            bibliography.innerHTML += `<a href="${link}">${link}</a><br/>`;
+        }
+    });

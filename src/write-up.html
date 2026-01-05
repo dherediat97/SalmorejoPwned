@@ -17,16 +17,16 @@
 
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/pico.green.min.css">
-    <link rel="stylesheet" href="css/pico.colors.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/asciinema-player.css">
+    <link rel="stylesheet" href="css/pico.green.min.css" />
+    <link rel="stylesheet" href="css/pico.colors.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/asciinema-player.css" />
 </head>
 
 <body>
@@ -34,7 +34,11 @@
         <nav>
             <ul>
                 <li>
-                    <h1><a href="../index.html">CyberWriteUps</a></h1>
+                    <h1>><span class="blink">_</span>
+                        <span class="website-title">
+                            <a href="../index.html">CyberWriteUps</a>
+                        </span>
+                    </h1>
                 </li>
             </ul>
             <ul>
@@ -43,19 +47,27 @@
                 </li>
                 <li>
                     <select name="selectLanguage" aria-label="Select language" id="selectLanguage">
-                        <option selected value="es">Español</option>
-                        <option value="en">English</option>
+                        <option value="es" selected>ES</option>
+                        <option value="en">EN</option>
                     </select>
                 </li>
             </ul>
         </nav>
+
         <h2 class="ctfName"></h2>
         <div id="writeUp"></div>
-        <div class="musicRights"></div>
+
+        <div class="bibliography">
+            <h2>Bibiliografía</h2>
+            <div class="bibliography-links"></div>
+        </div>
     </main>
+
+    <div id="footer"></div>
 
     <script src="js/constants.js"></script>
     <script src="js/asciinema-player.min.js"></script>
     <script src="js/i18n.js"></script>
+    <script src="js/footer.js"></script>
     <script src="js/write-up.js"></script>
 </body>
