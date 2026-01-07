@@ -12,6 +12,7 @@ AsciinemaPlayer.create(
     `assets/write-ups/${writeUpParams[1]}.cast`,
     writeUpDiv,
     {
+        rows: 20,
         idleTimeLimit: 2,
         controls: true,
         autoPlay: true,
