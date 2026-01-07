@@ -7,6 +7,10 @@
     font-family: "Cascadia Code", sans-serif;
     font-optical-sizing: auto;
     --pico-color-primary: #4CAF50;
+
+    overflow: visible;
+    scrollbar-color: #4CAF50 black;
+    scrollbar-width: auto;
   }
 
   * {
@@ -15,9 +19,8 @@
   }
 
   .website-title {
-    color: #4CAF50;
+    color: var(--pico-color-primary);
     font-weight: bold;
-    font-size: 1.1rem;
   }
 
   .festive-title {

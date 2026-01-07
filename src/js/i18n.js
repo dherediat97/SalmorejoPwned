@@ -18,9 +18,13 @@ function changeLanguage(language) {
 }
 
 function setData(response, element) {
-    element.forEach((data) => {
-        data.textContent = response;
-    });
+    if (element instanceof NodeList) {
+        element.forEach((data) => {
+            data.textContent = response;
+        });
+    } else {
+        element.textContent = response;
+    }
 }
 
 //Set the strings in the HTML
@@ -33,6 +37,9 @@ function setStrings(translations) {
     const forenseTitle = document.querySelectorAll('.forensics-title');
     const iahackingTitle = document.querySelectorAll('.ia-hacking-title');
     const osintTitle = document.querySelectorAll('.osint-title');
+
+    //Intro Title
+    const introTitle = document.querySelector('.intro-title');
 
     //CTF Titles
     const levelTitle = document.querySelectorAll('.level-title');
@@ -59,6 +66,7 @@ function setStrings(translations) {
     setData(translations.forensics, forenseTitle);
     setData(translations.ia_hacking, iahackingTitle);
     setData(translations.osint, osintTitle);
+    setData(translations.intro_title, introTitle);
 
     setData(translations.level, levelTitle);
     setData(translations.categories, categoriesTitle);
