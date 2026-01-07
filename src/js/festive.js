@@ -1,10 +1,15 @@
 function isFestiveDate(date) {
-    const currentMonth = date.getMonth();
-    const currentDate = date.getDate();
-    const isFestiveMonth = currentMonth == 0 || currentMonth == 11;
-    7;
-    const isFestiveDate = currentDate >= 12 || currentDate <= 31;
-    return isFestiveMonth && isFestiveDate;
+    const festiveMonth = date.getMonth();
+    const festiveDate = date.getDate();
+    console.log(
+        (festiveMonth == 0 && festiveDate <= 12) ||
+            (festiveMonth == 11 && festiveDate >= 10 && festiveDate <= 31)
+    );
+
+    return (
+        (festiveMonth == 0 && festiveDate <= 12) ||
+        (festiveMonth == 11 && festiveDate >= 10 && festiveDate <= 31)
+    );
 }
 
 if (isFestiveDate(new Date())) {
@@ -54,21 +59,18 @@ if (isFestiveDate(new Date())) {
         <li></li>
     </ul>`;
 
+    const festiveTitle = document.getElementById('intro-container');
+    festiveTitle.innerHTML = "<h3 class='festive-title'></h3>";
+
     const introDiv = document.getElementById('intro');
-    if (introDiv !== null) {
-        var randomNumber = Math.round(Math.random() * 3);
-        if (randomNumber == 0) {
-            randomNumber = 1;
-        }
-        AsciinemaPlayer.create(
-            FESTIVE_INTRO + randomNumber + '.cast',
-            introDiv,
-            {
-                controls: false,
-                idleTimeLimit: 2,
-                autoPlay: true,
-                loop: true,
-            }
-        );
-    }
+
+    var randomNumber = Math.round(Math.random() * 2) + 1;
+    console.log(randomNumber);
+
+    AsciinemaPlayer.create(FESTIVE_INTRO + randomNumber + '.cast', introDiv, {
+        controls: false,
+        idleTimeLimit: 2,
+        autoPlay: true,
+        loop: true,
+    });
 }
