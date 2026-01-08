@@ -30,8 +30,8 @@ fetch(CONFIG_URL_WRITE_UP)
         )[0];
         if (ctf.bibliography_links) {
             for (let i = 0; i < ctf.bibliography_links.length; i++) {
-                const link = ctf.bibliography_links[i];
-                bibliography.innerHTML += `<a href="${link}">${link}</a><br/>`;
+                const bibliographyItem = ctf.bibliography_links[i];
+                bibliography.innerHTML += `<a href="${bibliographyItem.url}">${bibliographyItem.desc}</a><br/>`;
             }
         }
     });
