@@ -12,14 +12,12 @@ const writeUpDiv = document.getElementById('writeUp');
 const categoryNavElement = document.querySelector('.category');
 
 var md = new MobileDetect(navigator.userAgent);
-if (ctfName == 'aceituna_brava' || isDev == 'isDev=true') {
-    AsciinemaPlayer.create(`assets/write-ups/${writeUpName}.cast`, writeUpDiv, {
-        rows: md.os() == 'iOS' || md.os() == 'AndroidOS' ? '60' : 20,
-        idleTimeLimit: 2,
-        controls: true,
-        autoPlay: true,
-    });
-}
+AsciinemaPlayer.create(`assets/write-ups/${writeUpName}.cast`, writeUpDiv, {
+    rows: md.os() == 'iOS' || md.os() == 'AndroidOS' ? '60' : 20,
+    idleTimeLimit: 2,
+    controls: true,
+    autoPlay: true,
+});
 
 const bibliography = document.querySelector('.bibliography-links');
 

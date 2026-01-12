@@ -14,7 +14,6 @@ function getCtfs() {
                     level: ctf.level,
                     tags: ctf.tags,
                     platform: ctf.platform,
-                    dev: ctf.dev,
                     writeUpUrl: ctf.writeup_url,
                     bibliography_links: ctf.bibliography_links,
                     done: ctf.done,
