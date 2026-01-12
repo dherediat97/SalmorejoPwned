@@ -203,6 +203,7 @@
             "web",
             "linux"
         ],
+        "dev": true,
         "done": false
     },
     {

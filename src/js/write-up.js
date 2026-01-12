@@ -6,17 +6,20 @@ const ctfName =
 
 ctfNameElement.textContent = ctfName.charAt(0).toUpperCase() + ctfName.slice(1);
 
+const isDev = document.location.hash.split('#')[2];
+
 const writeUpDiv = document.getElementById('writeUp');
 const categoryNavElement = document.querySelector('.category');
 
 var md = new MobileDetect(navigator.userAgent);
-
-AsciinemaPlayer.create(`assets/write-ups/${writeUpName}.cast`, writeUpDiv, {
-    rows: md.os() == 'iOS' || md.os() == 'AndroidOS' ? '60' : 20,
-    idleTimeLimit: 2,
-    controls: true,
-    autoPlay: true,
-});
+if (ctfName == 'aceituna_brava' || isDev == 'isDev=true') {
+    AsciinemaPlayer.create(`assets/write-ups/${writeUpName}.cast`, writeUpDiv, {
+        rows: md.os() == 'iOS' || md.os() == 'AndroidOS' ? '60' : 20,
+        idleTimeLimit: 2,
+        controls: true,
+        autoPlay: true,
+    });
+}
 
 const bibliography = document.querySelector('.bibliography-links');
 
