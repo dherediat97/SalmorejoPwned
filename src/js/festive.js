@@ -3,10 +3,13 @@ function isFestiveDate(date) {
     const festiveDate = date.getDate();
 
     return (
-        (festiveMonth == 0 && festiveDate <= 12) ||
+        (festiveMonth == 0 && festiveDate <= 6) ||
         (festiveMonth == 11 && festiveDate >= 10 && festiveDate <= 31)
     );
 }
+
+const introDiv = document.getElementById('intro');
+
 function setFestiveDecorations() {
     if (isFestiveDate(new Date())) {
         const festive = document.getElementById('festive');
@@ -59,7 +62,6 @@ function setFestiveDecorations() {
         if (!festiveTitle) return;
 
         festiveTitle.innerHTML = "<h3 class='festive-title'></h3>";
-        const introDiv = document.getElementById('intro');
 
         var randomNumber = Math.round(Math.random() * 2) + 1;
 
@@ -77,3 +79,10 @@ function setFestiveDecorations() {
 }
 
 setFestiveDecorations();
+
+AsciinemaPlayer.create(COMMON_INTRO, introDiv, {
+    controls: false,
+    idleTimeLimit: 2,
+    autoPlay: true,
+    loop: true,
+});
