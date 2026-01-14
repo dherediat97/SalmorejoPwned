@@ -12,12 +12,6 @@ const writeUpDiv = document.getElementById('writeUp');
 const categoryNavElement = document.querySelector('.category');
 
 var md = new MobileDetect(navigator.userAgent);
-AsciinemaPlayer.create(`assets/write-ups/${writeUpName}.cast`, writeUpDiv, {
-    rows: md.os() == 'iOS' || md.os() == 'AndroidOS' ? '60' : 20,
-    idleTimeLimit: 2,
-    controls: true,
-    autoPlay: true,
-});
 
 const bibliography = document.querySelector('.bibliography-links');
 
@@ -29,6 +23,17 @@ fetch(CONFIG_URL_WRITE_UP)
         const ctf = ctfList.filter((ctfFound) =>
             ctfFound.writeup_url.includes(writeUpName)
         )[0];
+        AsciinemaPlayer.create(
+            `assets/write-ups/${writeUpName}.cast`,
+            writeUpDiv,
+            {
+                rows: md.os() == 'iOS' || md.os() == 'AndroidOS' ? '60' : 20,
+                idleTimeLimit: 2,
+                controls: true,
+                autoPlay: true,
+                speed: ctf.level == 'expert' ? 4 : 1,
+            }
+        );
         if (ctf.bibliography_links) {
             for (let i = 0; i < ctf.bibliography_links.length; i++) {
                 const bibliographyItem = ctf.bibliography_links[i];

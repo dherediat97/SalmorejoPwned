@@ -105,3 +105,10 @@ function groupByCategory(items, categories) {
 }
 
 getCtfs();
+
+AsciinemaPlayer.create(COMMON_INTRO, introDiv, {
+    controls: false,
+    idleTimeLimit: 2,
+    autoPlay: true,
+    loop: true,
+});

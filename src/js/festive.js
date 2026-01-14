@@ -10,10 +10,9 @@ function isFestiveDate(date) {
 
 const introDiv = document.getElementById('intro');
 
-function setFestiveDecorations() {
-    if (isFestiveDate(new Date())) {
-        const festive = document.getElementById('festive');
-        festive.innerHTML = `<ul class="lightrope">
+if (isFestiveDate(new Date())) {
+    const festive = document.getElementById('festive');
+    festive.innerHTML = `<ul class="lightrope">
         <li></li>
         <li></li>
         <li></li>
@@ -58,31 +57,16 @@ function setFestiveDecorations() {
         <li></li>
     </ul>`;
 
-        const festiveTitle = document.getElementById('intro-container');
-        if (!festiveTitle) return;
+    const festiveTitle = document.getElementById('intro-container');
 
-        festiveTitle.innerHTML = "<h3 class='festive-title'></h3>";
+    festiveTitle.innerHTML = "<h3 class='festive-title'></h3>";
 
-        var randomNumber = Math.round(Math.random() * 2) + 1;
+    var randomNumber = Math.round(Math.random() * 2) + 1;
 
-        AsciinemaPlayer.create(
-            FESTIVE_INTRO + randomNumber + '.cast',
-            introDiv,
-            {
-                controls: false,
-                idleTimeLimit: 2,
-                autoPlay: true,
-                loop: true,
-            }
-        );
-    }
+    AsciinemaPlayer.create(FESTIVE_INTRO + randomNumber + '.cast', introDiv, {
+        controls: false,
+        idleTimeLimit: 2,
+        autoPlay: true,
+        loop: true,
+    });
 }
-
-setFestiveDecorations();
-
-AsciinemaPlayer.create(COMMON_INTRO, introDiv, {
-    controls: false,
-    idleTimeLimit: 2,
-    autoPlay: true,
-    loop: true,
-});
