@@ -203,6 +203,28 @@
             "web",
             "linux"
         ],
+        "bibliography_links": [
+            {
+                "desc": "Chamilo LMS Vulnerability",
+                "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-4220"
+            },
+            {
+                "desc": "PwnDdb Tools",
+                "url": "https://pwndbg.re/stable/"
+            },
+            {
+                "desc": "Crypto Z3",
+                "url": "https://github.com/Z3Prover/z3"
+            },
+            {
+                "desc": "Squid Proxy",
+                "url": "https://curiosidadesdehackers.com/enumeracion-y-explotacion-de-squid-proxies/"
+            },
+            {
+                "desc": "Pwn Tools",
+                "url": "https://docs.pwntools.com/en/stable/"
+            }
+        ],
         "done": false
     },
     {
