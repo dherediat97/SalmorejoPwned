@@ -3,7 +3,7 @@ const currentLanguage = navigator.language;
 
 //Fetch the language file and set the strings
 function changeLanguage(language) {
-    const supportedLanguages = ['en-EN', 'es-ES'];
+    const supportedLanguages = ['en-EN', 'es-ES', 'zh-ZH', 'ja-JA', 'de-DE'];
     if (!supportedLanguages.includes(language)) {
         language = 'en-EN';
     }
@@ -18,6 +18,8 @@ function changeLanguage(language) {
 }
 
 function setData(response, element) {
+    if (element == null) return;
+
     if (element instanceof NodeList) {
         element.forEach((data) => {
             data.textContent = response;
@@ -43,7 +45,7 @@ function setStrings(translations) {
 
     //CTF Titles
     const levelTitle = document.querySelectorAll('.level-title');
-    const categoriesTitle = document.querySelectorAll('.categories-title');
+    const categoriesTitle = document.querySelectorAll('.ctf-category-title');
     const easyTitle = document.querySelectorAll('.ctf-level-easy');
     const advancedTitle = document.querySelectorAll('.ctf-level-advanced');
     const expertTitle = document.querySelectorAll('.ctf-level-expert');
@@ -56,6 +58,7 @@ function setStrings(translations) {
 
     const madeWithTitle = document.querySelectorAll('.made-with-title');
     const byTitle = document.querySelectorAll('.by-title');
+    const bibliographyTitle = document.querySelectorAll('.bibliography-title');
 
     const festiveTitle = document.querySelectorAll('.festive-title');
 
@@ -79,6 +82,8 @@ function setStrings(translations) {
 
     setData(translations.made_with, madeWithTitle);
     setData(translations.by, byTitle);
+
+    setData(translations.bibliography_title, bibliographyTitle);
 
     setData(translations.festive, festiveTitle);
 }

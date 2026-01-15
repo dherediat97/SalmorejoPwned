@@ -26,7 +26,6 @@
 
   .navigation {
     display: flex;
-
   }
 
   .navigation ul {
@@ -155,22 +154,14 @@
     margin-top: 2rem;
   }
 
+  .ctf-writeup-card.pendingWriteUp {
+    opacity: 0.3;
+  }
+
   .ctf-writeup-card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
     transform: scale(1.02);
     transition: all 0.3s ease-in-out;
-  }
-
-  .ap-button {
-    background-color: #333333;
-    color: white;
-  }
-
-  div.ap-control-bar span.ap-playback-button svg {
-    color: white;
-    background-color: #333333;
-    height: 2px;
-    width: 2px;
   }
 
   .ctf-title,
@@ -203,6 +194,11 @@
     text-transform: uppercase;
   }
 
+  .show-write-up-title {
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+  }
+
   .ctf-write-up {
     display: flex;
     font-weight: bold;
@@ -229,6 +225,10 @@
 
   .bibliography {
     margin-top: 2em;
+  }
+
+  .bibliography-title {
+    margin: 0 auto;
   }
 
   .blink {

@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/festive.css" />
     <link rel="stylesheet" href="css/asciinema-player.css" />
+    <link rel="stylesheet" href="css/writeup.css" />
 </head>
 
 <body>
@@ -36,11 +37,7 @@
         <nav class="navigation">
             <ul>
                 <li>
-                    <h4>><span class="blink">_</span>
-                        <span class="website-title">
-                            <a href="../index.html">SalmorejoPwned</a>
-                        </span>
-                    </h4>
+                    <h1>><span class="blink">_</span> <a href="../index.html">SalmorejoPwned</a> </h1>
                 </li>
             </ul>
             <ul>
@@ -51,16 +48,21 @@
                     <select name="selectLanguage" aria-label="Select language" id="selectLanguage">
                         <option value="es" selected>ES</option>
                         <option value="en">EN</option>
+                        <option value="zh">ZH</option>
+                        <option value="ja">JA</option>
+                        <option value="de">DE</option>
                     </select>
                 </li>
             </ul>
         </nav>
 
         <h2 class="ctfName"></h2>
-        <div id="writeUp"></div>
+        <div class="writeUp-wrapper">
+            <div id="writeUp"></div>
+        </div>
 
         <div class="bibliography">
-            <h2>Bibiliografía</h2>
+            <h2 class="bibliography-title"></h2>
             <div class="bibliography-links"></div>
         </div>
     </main>
@@ -70,6 +72,7 @@
     <script src="js/constants.js"></script>
     <script src="js/asciinema-player.min.js"></script>
     <script src="js/footer.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/festive.js"></script>
     <script src="js/mobile-detect.js"></script>
     <script src="js/write-up.js"></script>
