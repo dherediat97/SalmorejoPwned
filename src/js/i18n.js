@@ -1,5 +1,13 @@
 //Get the browser language
-const currentLanguage = navigator.language;
+const currentLanguage = getInitialLanguage();
+
+const selectLanguage = document.getElementById('selectLanguage');
+
+Array.from(selectLanguage.options).forEach(function (option, index) {
+    if (option.value === currentLanguage) {
+        option.selected = index;
+    }
+});
 
 //Fetch the language file and set the strings
 function changeLanguage(language) {
@@ -92,9 +100,16 @@ function setStrings(translations) {
 changeLanguage(currentLanguage);
 
 //Change language on select change
-const selectLanguage = document.getElementById('selectLanguage');
 selectLanguage.addEventListener('change', (event) => {
-    const selectedLanguage =
-        event.target.value + '-' + event.target.value.toUpperCase();
+    const selectedLanguage = event.target.value;
+    localStorage.setItem(SELECTED_LANGUAGE_KEY, selectedLanguage);
     changeLanguage(selectedLanguage);
 });
+
+function getInitialLanguage() {
+    console.log(localStorage.getItem(SELECTED_LANGUAGE_KEY));
+    if (localStorage.getItem(SELECTED_LANGUAGE_KEY) === undefined)
+        return navigator.language;
+
+    return localStorage.getItem(SELECTED_LANGUAGE_KEY);
+}

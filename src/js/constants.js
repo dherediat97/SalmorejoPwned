@@ -47,3 +47,5 @@ const AUTHOR_BLOGS = {
 };
 
 const THL_CTF_PAGE = 'https://labs.thehackerslabs.com/machine/';
+
+const SELECTED_LANGUAGE_KEY = 'SELECTED_LANGUAGE';
