@@ -107,7 +107,6 @@ selectLanguage.addEventListener('change', (event) => {
 });
 
 function getInitialLanguage() {
-    console.log(localStorage.getItem(SELECTED_LANGUAGE_KEY));
     if (localStorage.getItem(SELECTED_LANGUAGE_KEY) === undefined)
         return navigator.language;
 
