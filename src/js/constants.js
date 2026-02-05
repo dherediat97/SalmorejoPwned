@@ -13,7 +13,9 @@ const CONFIG_URL_WRITE_UP = APP_DEVELOPMENT
 const CONFIG_URL = APP_DEVELOPMENT
     ? '/src/json/config.json'
     : 'src/json/config.json';
-const I18N_URL = 'assets/i18n/languages';
+const I18N_URL = window.location.pathname.includes('write-up.html')
+    ? 'assets/i18n/languages'
+    : 'src/assets/i18n/languages';
 const FESTIVE_INTRO = 'src/assets/special/festive_intro_';
 const COMMON_INTRO = 'src/assets/intro.cast';
 const ctfsAvailable = [];
