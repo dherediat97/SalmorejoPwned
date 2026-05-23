@@ -23,7 +23,6 @@ fetch(CONFIG_URL_WRITE_UP)
         const ctf = ctfList.filter((ctfFound) =>
             ctfFound.writeup_url.includes(writeUpName)
         )[0];
-        console.log(ctf);
         document
             .querySelector('meta[property="og:image"]')
             .setAttribute('content', ctf.img_url);
