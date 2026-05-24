@@ -8,12 +8,8 @@ if (
 }
 
 const BASE_PATH = APP_DEVELOPMENT ? '' : '/SalmorejoPwned';
-const CONFIG_URL_WRITE_UP = APP_DEVELOPMENT
-    ? '/src/json/config.json'
-    : `${BASE_PATH}/src/json/config.json`;
-const CONFIG_URL = APP_DEVELOPMENT
-    ? '/src/json/config.json'
-    : `${BASE_PATH}/src/json/config.json`;
+const CONFIG_URL_WRITE_UP = `${BASE_PATH}/src/json/config.json`;
+const CONFIG_URL = `${BASE_PATH}/src/json/config.json`;
 
 const WRITE_UP_CAST_URL = APP_DEVELOPMENT
     ? `/src/assets/write-ups/`
