@@ -1,5 +1,22 @@
+function normalizeUrlPrefix(url, prefix) {
+    if (!url || typeof url !== 'string') {
+        return url;
+    }
+
+    const isProduction = !window.location.pathname.includes(prefix);
+
+    if (isProduction && url.startsWith(prefix)) {
+        return url.slice(prefix.length) || '/';
+    }
+
+    return url;
+}
+
 function getCtfs() {
-    fetch(CONFIG_URL)
+    const configUrl = normalizeUrlPrefix(CONFIG_URL, '/SalmorejoPwned');
+    const thlCtfPage = normalizeUrlPrefix(THL_CTF_PAGE, '/SalmorejoPwned');
+
+    fetch(configUrl)
         .then((response) => {
             return response.json();
         })

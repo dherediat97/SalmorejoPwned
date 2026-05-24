@@ -13,11 +13,11 @@ const CONFIG_URL_WRITE_UP = APP_DEVELOPMENT
     : `${BASE_PATH}/json/config.json`;
 const CONFIG_URL = APP_DEVELOPMENT
     ? '/src/json/config.json'
-    : `/${BASE_PATH}/src/json/config.json`;
+    : `${BASE_PATH}/src/json/config.json`;
 
 const WRITE_UP_CAST_URL = APP_DEVELOPMENT
     ? `/src/assets/write-ups/`
-    : `/${BASE_PATH}/src/assets/write-ups/`;
+    : `${BASE_PATH}/src/assets/write-ups/`;
 
 const I18N_URL = window.location.pathname.includes('write-up.html')
     ? APP_DEVELOPMENT
