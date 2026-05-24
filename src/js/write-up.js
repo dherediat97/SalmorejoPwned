@@ -23,17 +23,32 @@ fetch(CONFIG_URL_WRITE_UP)
         const ctf = ctfList.filter((ctfFound) =>
             ctfFound.writeup_url.includes(writeUpName)
         )[0];
-        var metaTitle = document.querySelector('meta[property="og:title"]');
+        var metaTitle = document.querySelector('meta[property="name"]');
         metaTitle.setAttribute(
             'content',
             `SalmorejoPwned - Write Up of ${ctf.title}`
         );
+        var metaTitleOG = document.querySelector('meta[property="og:title"]');
+        metaTitleOG.setAttribute(
+            'content',
+            `SalmorejoPwned - Write Up of ${ctf.title}`
+        );
         var metaDescription = document.querySelector(
+            'meta[itemprop="description"]'
+        );
+        metaDescription.setAttribute(
+            'content',
+            `A resolution of ${ctf.title} challenge, by ${ctf.author}. The ctf was categorized as ${ctf.level} and the write up is about ${ctf.tags.join(', ')}.`
+        );
+        var metaDescriptionOG = document.querySelector(
             'meta[property="og:description"]'
         );
-        metaDescription.setAttribute('content', `A resolution of ${ctf.title}`);
-        var metaImage = document.querySelector('meta[property="og:image"]');
-        metaImage.setAttribute('content', ctf.img_url);
+        metaDescriptionOG.setAttribute(
+            'content',
+            `A resolution of ${ctf.title} challenge, by ${ctf.author}. The ctf was categorized as ${ctf.level} and the write up is about ${ctf.tags.join(', ')}.`
+        );
+        var metaImageOG = document.querySelector('meta[property="og:image"]');
+        metaImageOG.setAttribute('content', ctf.img_url);
         var metaImage = document.querySelector('meta[itemprop="image"]');
         metaImage.setAttribute('content', ctf.img_url);
 
