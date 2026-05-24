@@ -7,19 +7,32 @@ if (
     var APP_DEVELOPMENT = false;
 }
 
+const BASE_PATH = APP_DEVELOPMENT ? '' : '/SalmorejoPwned';
 const CONFIG_URL_WRITE_UP = APP_DEVELOPMENT
     ? '/src/json/config.json'
-    : 'json/config.json';
+    : `${BASE_PATH}/json/config.json`;
 const CONFIG_URL = APP_DEVELOPMENT
     ? '/src/json/config.json'
-    : 'src/json/config.json';
+    : `${BASE_PATH}/src/json/config.json`;
+
+const WRITE_UP_CAST_URL = APP_DEVELOPMENT
+    ? `/src/assets/write-ups/`
+    : `${BASE_PATH}/src/assets/write-ups/`;
+
 const I18N_URL = window.location.pathname.includes('write-up.html')
-    ? 'assets/i18n/languages'
-    : 'src/assets/i18n/languages';
-const FESTIVE_INTRO = 'src/assets/special/festive_intro_';
-const COMMON_INTRO = 'src/assets/intro.cast';
+    ? APP_DEVELOPMENT
+        ? 'assets/i18n/languages'
+        : `${BASE_PATH}/assets/i18n/languages`
+    : APP_DEVELOPMENT
+      ? 'src/assets/i18n/languages'
+      : `${BASE_PATH}/src/assets/i18n/languages`;
+const FESTIVE_INTRO = APP_DEVELOPMENT
+    ? 'src/assets/special/festive_intro_'
+    : `${BASE_PATH}/src/assets/special/festive_intro_`;
+const COMMON_INTRO = APP_DEVELOPMENT
+    ? 'src/assets/intro.cast'
+    : `${BASE_PATH}/src/assets/intro.cast`;
 const ctfsAvailable = [];
-const MUSIC_URL = 'src/json/music.json';
 const CTF_CATEGORIES = [
     'defensive',
     'offensive',

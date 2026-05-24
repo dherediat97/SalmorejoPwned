@@ -64,7 +64,7 @@ fetch(CONFIG_URL_WRITE_UP)
         document.head.appendChild(metaDescription);
 
         AsciinemaPlayer.create(
-            `/src/assets/write-ups/${writeUpName}.cast`,
+            `${WRITE_UP_CAST_URL}${writeUpName}.cast`,
             writeUpDiv,
             {
                 rows: md.os() == 'iOS' || md.os() == 'AndroidOS' ? '60' : 20,
