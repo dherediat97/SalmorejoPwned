@@ -6,6 +6,7 @@ if (
 } else {
     var APP_DEVELOPMENT = false;
 }
+const INDEX_PAGE_URL = APP_DEVELOPMENT ? '/src/index.html' : 'index.html';
 
 const CONFIG_URL_WRITE_UP = APP_DEVELOPMENT
     ? '/src/json/config.json'
