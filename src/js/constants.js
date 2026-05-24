@@ -10,7 +10,7 @@ if (
 const BASE_PATH = APP_DEVELOPMENT ? '' : '/SalmorejoPwned';
 const CONFIG_URL_WRITE_UP = APP_DEVELOPMENT
     ? '/src/json/config.json'
-    : `${BASE_PATH}/json/config.json`;
+    : `${BASE_PATH}/src/json/config.json`;
 const CONFIG_URL = APP_DEVELOPMENT
     ? '/src/json/config.json'
     : `${BASE_PATH}/src/json/config.json`;
