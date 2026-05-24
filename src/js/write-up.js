@@ -16,7 +16,8 @@ if (
     document.location.hash &&
     !document.location.pathname.match(/\/writeups\//)
 ) {
-    const newPath = '/writeups/' + encodeURIComponent(writeUpName);
+    const basePath = document.location.pathname.split('/writeups/')[0];
+    const newPath = basePath + '/writeups/' + encodeURIComponent(writeUpName);
     history.replaceState(null, '', newPath + document.location.search);
 }
 const ctfNameElement = document.querySelector('.ctfName');
