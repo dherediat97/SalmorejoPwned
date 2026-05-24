@@ -20,6 +20,16 @@ if (
     const newPath = basePath + '/writeups/' + encodeURIComponent(writeUpName);
     history.replaceState(null, '', newPath + document.location.search);
 }
+// If there's no hash and no writeup in the path on page refresh, reconstruct the URL
+if (
+    !document.location.hash &&
+    !document.location.pathname.match(/\/writeups\//) &&
+    writeUpName
+) {
+    const basePath = document.location.pathname.split('/writeups/')[0];
+    const newPath = basePath + '/writeups/' + encodeURIComponent(writeUpName);
+    history.replaceState(null, '', newPath + document.location.search);
+}
 const ctfNameElement = document.querySelector('.ctfName');
 const ctfName =
     writeUpName.replace(/_/g, ' ').charAt(0).toUpperCase() +
@@ -46,22 +56,26 @@ fetch(CONFIG_URL_WRITE_UP)
         // Add meta tags
         const metaOgImage = document.createElement('meta');
         metaOgImage.setAttribute('property', 'og:image');
-        metaOgImage.content = ctf.image || '';
+        metaOgImage.content = ctf.img_url || '';
         document.head.appendChild(metaOgImage);
 
         const metaOgTitle = document.createElement('meta');
         metaOgTitle.setAttribute('property', 'og:title');
-        metaOgTitle.content = ctfName;
+        metaOgTitle.content = ctf.title;
         document.head.appendChild(metaOgTitle);
 
         const metaOgDescription = document.createElement('meta');
         metaOgDescription.setAttribute('property', 'og:description');
-        metaOgDescription.content = ctf.description || '';
+        metaOgDescription.content =
+            `A resolution of the ${ctf.title}. This ctf of this author: ${ctf.author} of theses categories: ${ctf.categories.join(', ')}` ||
+            '';
         document.head.appendChild(metaOgDescription);
 
         const metaDescription = document.createElement('meta');
         metaDescription.setAttribute('name', 'description');
-        metaDescription.content = ctf.description || '';
+        metaDescription.content =
+            `A resolution of the ${ctf.title}. This ctf of this author: ${ctf.author} of theses categories: ${ctf.categories.join(', ')}` ||
+            '';
         document.head.appendChild(metaDescription);
 
         AsciinemaPlayer.create(
