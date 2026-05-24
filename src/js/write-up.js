@@ -1,35 +1,4 @@
-// Support new path-based URLs like /writeups/el_amigo while keeping
-// backward compatibility with old hash-based URLs (#el_amigo).
-function getWriteUpName() {
-    const pathMatch = document.location.pathname.match(/\/writeups\/(.+)$/);
-    if (pathMatch && pathMatch[1]) {
-        return decodeURIComponent(pathMatch[1]);
-    }
-    const hashPart = document.location.hash.split('#')[1];
-    return hashPart || '';
-}
-
-let writeUpName = getWriteUpName();
-// If we used the old hash style, replace the url internally to the new path
-// so shared old links still work but users see the new canonical URL.
-if (
-    document.location.hash &&
-    !document.location.pathname.match(/\/writeups\//)
-) {
-    const basePath = document.location.pathname.split('/writeups/')[0];
-    const newPath = basePath + '/writeups/' + encodeURIComponent(writeUpName);
-    history.replaceState(null, '', newPath + document.location.search);
-}
-// If there's no hash and no writeup in the path on page refresh, reconstruct the URL
-if (
-    !document.location.hash &&
-    !document.location.pathname.match(/\/writeups\//) &&
-    writeUpName
-) {
-    const basePath = document.location.pathname.split('/writeups/')[0];
-    const newPath = basePath + '/writeups/' + encodeURIComponent(writeUpName);
-    history.replaceState(null, '', newPath + document.location.search);
-}
+const writeUpName = document.location.hash.split('#')[1];
 const ctfNameElement = document.querySelector('.ctfName');
 const ctfName =
     writeUpName.replace(/_/g, ' ').charAt(0).toUpperCase() +
@@ -77,9 +46,8 @@ fetch(CONFIG_URL_WRITE_UP)
             `A resolution of the ${ctf.title}. This ctf of this author: ${ctf.author} of theses categories: ${ctf.tags.join(', ')}` ||
             '';
         document.head.appendChild(metaDescription);
-
         AsciinemaPlayer.create(
-            `${WRITE_UP_CAST_URL}${writeUpName}.cast`,
+            `assets/write-ups/${writeUpName}.cast`,
             writeUpDiv,
             {
                 rows: md.os() == 'iOS' || md.os() == 'AndroidOS' ? '60' : 20,
