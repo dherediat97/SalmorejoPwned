@@ -67,14 +67,14 @@ fetch(CONFIG_URL_WRITE_UP)
         const metaOgDescription = document.createElement('meta');
         metaOgDescription.setAttribute('property', 'og:description');
         metaOgDescription.content =
-            `A resolution of the ${ctf.title}. This ctf of this author: ${ctf.author} of theses categories: ${ctf.categories.join(', ')}` ||
+            `A resolution of the ${ctf.title}. This ctf of this author: ${ctf.author} of theses categories: ${ctf.tags.join(', ')}` ||
             '';
         document.head.appendChild(metaOgDescription);
 
         const metaDescription = document.createElement('meta');
         metaDescription.setAttribute('name', 'description');
         metaDescription.content =
-            `A resolution of the ${ctf.title}. This ctf of this author: ${ctf.author} of theses categories: ${ctf.categories.join(', ')}` ||
+            `A resolution of the ${ctf.title}. This ctf of this author: ${ctf.author} of theses categories: ${ctf.tags.join(', ')}` ||
             '';
         document.head.appendChild(metaDescription);
 
