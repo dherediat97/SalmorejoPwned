@@ -23,13 +23,19 @@ fetch(CONFIG_URL_WRITE_UP)
         const ctf = ctfList.filter((ctfFound) =>
             ctfFound.writeup_url.includes(writeUpName)
         )[0];
-        document
-            .querySelector('meta[itemprop="image"]')
-            .setAttribute('content', ctf.img_url);
-
-        document
-            .querySelector('meta[property="og:image"]')
-            .setAttribute('content', ctf.img_url);
+        var metaTitle = document.querySelector('meta[property="og:title"]');
+        metaTitle.setAttribute(
+            'content',
+            `SalmorejoPwned - Write Up of ${ctf.title}`
+        );
+        var metaDescription = document.querySelector(
+            'meta[property="og:description"]'
+        );
+        metaDescription.setAttribute('content', `A resolution of ${ctf.title}`);
+        var metaImage = document.querySelector('meta[property="og:image"]');
+        metaImage.setAttribute('content', ctf.img_url);
+        var metaImage = document.querySelector('meta[itemprop="image"]');
+        metaImage.setAttribute('content', ctf.img_url);
 
         AsciinemaPlayer.create(
             `assets/write-ups/${writeUpName}.cast`,
