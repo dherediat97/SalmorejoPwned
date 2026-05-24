@@ -22,7 +22,7 @@ const WRITE_UP_CAST_URL = APP_DEVELOPMENT
 const I18N_URL = window.location.pathname.includes('write-up.html')
     ? APP_DEVELOPMENT
         ? 'assets/i18n/languages'
-        : `${BASE_PATH}/assets/i18n/languages`
+        : `${BASE_PATH}/src/assets/i18n/languages`
     : APP_DEVELOPMENT
       ? 'src/assets/i18n/languages'
       : `${BASE_PATH}/src/assets/i18n/languages`;
