@@ -24,8 +24,13 @@ fetch(CONFIG_URL_WRITE_UP)
             ctfFound.writeup_url.includes(writeUpName)
         )[0];
         document
+            .querySelector('meta[itemprop="image"]')
+            .setAttribute('content', ctf.img_url);
+
+        document
             .querySelector('meta[property="og:image"]')
             .setAttribute('content', ctf.img_url);
+
         AsciinemaPlayer.create(
             `assets/write-ups/${writeUpName}.cast`,
             writeUpDiv,
