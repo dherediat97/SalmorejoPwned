@@ -1,12 +1,30 @@
-const writeUpName = document.location.hash.split('#')[1];
+// Support new path-based URLs like /writeups/el_amigo while keeping
+// backward compatibility with old hash-based URLs (#el_amigo).
+function getWriteUpName() {
+    const pathMatch = document.location.pathname.match(/\/writeups\/(.+)$/);
+    if (pathMatch && pathMatch[1]) {
+        return decodeURIComponent(pathMatch[1]);
+    }
+    const hashPart = document.location.hash.split('#')[1];
+    return hashPart || '';
+}
+
+let writeUpName = getWriteUpName();
+// If we used the old hash style, replace the url internally to the new path
+// so shared old links still work but users see the new canonical URL.
+if (
+    document.location.hash &&
+    !document.location.pathname.match(/\/writeups\//)
+) {
+    const newPath = '/writeups/' + encodeURIComponent(writeUpName);
+    history.replaceState(null, '', newPath + document.location.search);
+}
 const ctfNameElement = document.querySelector('.ctfName');
 const ctfName =
     writeUpName.replace(/_/g, ' ').charAt(0).toUpperCase() +
     writeUpName.replace(/_/g, ' ').slice(1);
 
 ctfNameElement.textContent = ctfName.charAt(0).toUpperCase() + ctfName.slice(1);
-
-const isDev = document.location.hash.split('#')[2];
 
 const writeUpDiv = document.getElementById('writeUp');
 const categoryNavElement = document.querySelector('.category');
@@ -23,37 +41,30 @@ fetch(CONFIG_URL_WRITE_UP)
         const ctf = ctfList.filter((ctfFound) =>
             ctfFound.writeup_url.includes(writeUpName)
         )[0];
-        var metaTitle = document.querySelector('meta[property="name"]');
-        metaTitle.setAttribute(
-            'content',
-            `SalmorejoPwned - Write Up of ${ctf.title}`
-        );
-        var metaTitleOG = document.querySelector('meta[property="og:title"]');
-        metaTitleOG.setAttribute(
-            'content',
-            `SalmorejoPwned - Write Up of ${ctf.title}`
-        );
-        var metaDescription = document.querySelector(
-            'meta[itemprop="description"]'
-        );
-        metaDescription.setAttribute(
-            'content',
-            `A resolution of ${ctf.title} challenge, by ${ctf.author}. The ctf was categorized as ${ctf.level} and the write up is about ${ctf.tags.join(', ')}.`
-        );
-        var metaDescriptionOG = document.querySelector(
-            'meta[property="og:description"]'
-        );
-        metaDescriptionOG.setAttribute(
-            'content',
-            `A resolution of ${ctf.title} challenge, by ${ctf.author}. The ctf was categorized as ${ctf.level} and the write up is about ${ctf.tags.join(', ')}.`
-        );
-        var metaImageOG = document.querySelector('meta[property="og:image"]');
-        metaImageOG.setAttribute('content', ctf.img_url);
-        var metaImage = document.querySelector('meta[itemprop="image"]');
-        metaImage.setAttribute('content', ctf.img_url);
+
+        // Add meta tags
+        const metaOgImage = document.createElement('meta');
+        metaOgImage.setAttribute('property', 'og:image');
+        metaOgImage.content = ctf.image || '';
+        document.head.appendChild(metaOgImage);
+
+        const metaOgTitle = document.createElement('meta');
+        metaOgTitle.setAttribute('property', 'og:title');
+        metaOgTitle.content = ctfName;
+        document.head.appendChild(metaOgTitle);
+
+        const metaOgDescription = document.createElement('meta');
+        metaOgDescription.setAttribute('property', 'og:description');
+        metaOgDescription.content = ctf.description || '';
+        document.head.appendChild(metaOgDescription);
+
+        const metaDescription = document.createElement('meta');
+        metaDescription.setAttribute('name', 'description');
+        metaDescription.content = ctf.description || '';
+        document.head.appendChild(metaDescription);
 
         AsciinemaPlayer.create(
-            `assets/write-ups/${writeUpName}.cast`,
+            `/src/assets/write-ups/${writeUpName}.cast`,
             writeUpDiv,
             {
                 rows: md.os() == 'iOS' || md.os() == 'AndroidOS' ? '60' : 20,
