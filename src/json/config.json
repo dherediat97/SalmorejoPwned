@@ -320,5 +320,21 @@
             "steganography"
         ],
         "done": false
+    },
+    {
+        "id": 245,
+        "title": "Benahoare",
+        "author": "APS88",
+        "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/Benahoare_portada.png",
+        "writeup_url": "src/write-up.html#benahoare",
+        "level": "advanced",
+        "platform": "https://thehackerslabs.com/",
+        "main_category": "offensive",
+        "tags": [
+            "web",
+            "offensive",
+            "windows"
+        ],
+        "done": true
     }
 ]
