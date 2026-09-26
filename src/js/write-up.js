@@ -19,7 +19,7 @@ fetch(CONFIG_URL_WRITE_UP)
     })
     .then((ctfList) => {
         const ctf = ctfList.filter((ctfFound) =>
-            ctfFound.writeup_url.includes(writeUpName)
+            ctfFound.title.toLowerCase().replace(/\s+/g, '_').includes(writeUpName)
         )[0];
 
         AsciinemaPlayer.create(
