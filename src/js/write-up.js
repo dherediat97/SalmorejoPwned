@@ -22,30 +22,6 @@ fetch(CONFIG_URL_WRITE_UP)
             ctfFound.writeup_url.includes(writeUpName)
         )[0];
 
-        // Add meta tags
-        const metaOgImage = document.createElement('meta');
-        metaOgImage.setAttribute('property', 'og:image');
-        metaOgImage.content = ctf.img_url || '';
-        document.head.appendChild(metaOgImage);
-
-        const metaOgTitle = document.createElement('meta');
-        metaOgTitle.setAttribute('property', 'og:title');
-        metaOgTitle.content = ctf.title;
-        document.head.appendChild(metaOgTitle);
-
-        const metaOgDescription = document.createElement('meta');
-        metaOgDescription.setAttribute('property', 'og:description');
-        metaOgDescription.content =
-            `A resolution of the ${ctf.title}. This ctf of this author: ${ctf.author} of theses categories: ${ctf.tags.join(', ')}` ||
-            '';
-        document.head.appendChild(metaOgDescription);
-
-        const metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        metaDescription.content =
-            `A resolution of the ${ctf.title}. This ctf of this author: ${ctf.author} of theses categories: ${ctf.tags.join(', ')}` ||
-            '';
-        document.head.appendChild(metaDescription);
         AsciinemaPlayer.create(
             `assets/write-ups/${writeUpName}.cast`,
             writeUpDiv,

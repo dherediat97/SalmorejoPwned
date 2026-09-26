@@ -10,7 +10,7 @@ maquinas.forEach(maquina => {
 <head>
     <meta charset="UTF-8">
     <title>SalmorejoPwned - ${maquina.title}</title>
-    <meta property="og:title" content="SalmorejoPwned - ${maquina.title}">
+    <meta property="og:title" content="SalmorejoPwned - Write-up ${maquina.title}">
     <meta property="og:image" content="${maquina.img_url}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="${maquina.img_url}">
