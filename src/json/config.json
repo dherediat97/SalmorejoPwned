@@ -350,6 +350,24 @@
             "web",
             "offensive"
         ],
+         "bibliography_links": [
+            {
+                "desc": "Path Hijacking",
+                "url": "https://blog.deephacking.tech/es/posts/path-hijacking-library-hijacking/"
+            },
+            {
+                "desc": "DNS Subdomain",
+                "url": "https://davidejones.com/blog/dig-commands/"
+            },
+            {
+                "desc": "Similar example of the vulnerability",
+                "url": "https://medium.com/@brsdncr/case-library-path-hijacking-linux-file-capabilities-35531b0542fb"
+            },
+            {
+                "desc": "NKMod",
+                "url": "https://man7.org/linux/man-pages/man1/mknod.1.html"
+            }
+        ],
         "done": true
     }
 ]
