@@ -46,6 +46,7 @@ const AUTHOR_BLOGS = {
     MeTaN01a: '',
     lenam: 'https://len4m.github.io/',
     'condor & CuriosidadesDeHackers': 'https://curiosidadesdehackers.com/about',
+    nohh022: 'https://nohh022.github.io/'
 };
 
 const THL_CTF_PAGE = 'https://labs.thehackerslabs.com/machine/';
