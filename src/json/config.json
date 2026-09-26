@@ -336,5 +336,20 @@
             "windows"
         ],
         "done": true
+    },
+    {
+        "id": 296,
+        "title": "Kaboom",
+        "author": "nohh022",
+        "img_url": "https://labs.thehackerslabs.com/static/uploads/machines/df18ca429c6a4b2eaa70f40ea1175cd8.jpg",
+        "writeup_url": "src/write-up.html#kaboom",
+        "level": "advanced",
+        "platform": "https://thehackerslabs.com/",
+        "main_category": "offensive",
+        "tags": [
+            "web",
+            "offensive"
+        ],
+        "done": true
     }
 ]
