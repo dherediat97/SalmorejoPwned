@@ -4,11 +4,5 @@
 
 ## En este repo escribiré todos los write-ups de los ctfs que resuelva. La idea es poder trasmitir mi aprendizaje durante la multitud de CTFS que hay disponibles.
 
-To-Do List:
-
--   [x] Hacer algunos CTFS de HackerLabs.
--   [ ] Añadir CTFS en CyberDefenders y HackTheBox.
--   [x] Añadir videos en formato [ascii](https://asciinema.org/).
--   [x] Añadir referencias en cada CTF.
 
 Made by @dherediat97
