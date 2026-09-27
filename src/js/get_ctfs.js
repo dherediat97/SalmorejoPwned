@@ -44,27 +44,22 @@ function getCtfs() {
                         !ctf.done ? 'pendingWriteUp' : 'writeUpDone'
                     );
                     writeUpCard.innerHTML = `
-                    <img class="ctf-writeup-img" src="${
-                        ctf.img_url
-                    }" alt="CTF Image"/>
+                    <img class="ctf-writeup-img" src="${ctf.img_url
+                        }" alt="CTF Image"/>
                     <div class="ctf-details">
-                    <div class="ctf-title"><a href="${THL_CTF_PAGE}${
-                        ctf.id
-                    }" target="_blank">${ctf.title}</a></div>
-                    <div class="ctf-level">Dificultad: <span class="ctf-level-${
-                        ctf.level
-                    }">${ctf.level}</span></div>
-                    <div class="ctf-category">Categorías: ${
-                        ctf.main_category
-                    },${ctf.tags}</div>
-                    <div class="ctf-platform">Plataforma: <a href="${
-                        ctf.platform
-                    }" target="_blank">${getPlatformName(
-                        ctf.platform
-                    )}</a></div>
+                    <div class="ctf-title"><a href="${THL_CTF_PAGE}${ctf.id
+                        }" target="_blank">${ctf.title}</a></div>
+                    <div class="ctf-level">Dificultad: <span class="ctf-level-${ctf.level
+                        }">${ctf.level}</span></div>
+                    <div class="ctf-category">Categorías: ${ctf.main_category
+                        },${ctf.tags}</div>
+                    <div class="ctf-platform">Plataforma: <a href="${ctf.platform
+                        }" target="_blank">${getPlatformName(
+                            ctf.platform
+                        )}</a></div>
                     <div class="ctf-author">Autor: <a href="${getAuthorBlogUrl(
-                        ctf.author
-                    )}" target="_blank">${ctf.author}</a></div>
+                            ctf.author
+                        )}" target="_blank">${ctf.author}</a></div>
                     ${ctf.done ? showWriteUpButton(ctf) : `<div></div>`}
                     </div>
                 `;
@@ -106,7 +101,49 @@ function groupByCategory(items, categories) {
 
 getCtfs();
 
-AsciinemaPlayer.create(COMMON_INTRO, introDiv, {
+const getRandomFrikiMusic = () => {
+    const frikiMusic = [
+        'src/assets/bg/bg_1.mp3',
+        'src/assets/bg/bg_2.mp3',
+        'src/assets/bg/bg_3.mp3',
+    ];
+
+    return frikiMusic[Math.floor(Math.random() * frikiMusic.length)];
+};
+
+const maybeStartBackgroundMusic = () => {
+    if (new URLSearchParams(window.location.search).get('mode') !== 'friki') {
+        return;
+    }
+
+    const backgroundMusic = new Audio(getRandomFrikiMusic());
+    backgroundMusic.loop = true;
+    backgroundMusic.volume = 0.12;
+
+    const startBackgroundMusic = () => {
+        backgroundMusic.play().catch(() => { });
+    };
+
+    document.addEventListener('pointerdown', startBackgroundMusic, { once: true });
+    document.addEventListener('keydown', startBackgroundMusic, { once: true });
+};
+
+maybeStartBackgroundMusic();
+
+const introUrl = new URL(COMMON_INTRO, window.location.href);
+if (new URLSearchParams(window.location.search).get('mode') === 'friki') {
+    const frikiIntros = [
+        'random_intro1.cast',
+        'random_intro2.cast',
+        'random_intro3.cast',
+    ];
+    introUrl.pathname = `${introUrl.pathname.substring(
+        0,
+        introUrl.pathname.lastIndexOf('/') + 1
+    )}${frikiIntros[Math.floor(Math.random() * frikiIntros.length)]}`;
+}
+
+AsciinemaPlayer.create(introUrl.href, introDiv, {
     controls: false,
     idleTimeLimit: 2,
     autoPlay: true,
