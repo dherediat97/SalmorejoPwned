@@ -3,8 +3,7 @@ function isFestiveDate(date) {
     const festiveDate = date.getDate();
 
     return (
-        (festiveMonth == 0 && festiveDate <= 6) ||
-        (festiveMonth == 11 && festiveDate >= 10 && festiveDate <= 31)
+        (festiveMonth == 11 || festiveMonth == 12 && festiveDate >= 10 && festiveDate <= 31)
     );
 }
 
