@@ -143,9 +143,9 @@ if (new URLSearchParams(window.location.search).get('mode') === 'friki') {
     )}${frikiIntros[Math.floor(Math.random() * frikiIntros.length)]}`;
 }
 
-AsciinemaPlayer.create(introUrl.href, introDiv, {
+/*AsciinemaPlayer.create(introUrl.href, introDiv, {
     controls: false,
     idleTimeLimit: 2,
     autoPlay: true,
     loop: true,
-});
+});*/
